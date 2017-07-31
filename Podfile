@@ -8,5 +8,6 @@ target 'Namdong' do
   use_frameworks!
 
   # Pods for Namdong
+  pod 'KRProgressHUD', '~> 3.0'
 
 end
