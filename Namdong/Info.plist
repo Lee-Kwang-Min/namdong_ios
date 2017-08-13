@@ -34,5 +34,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>kakaolink</string>
+        <string>fb</string>
+        <string>weixin</string>
+    </array>
 </dict>
 </plist>
