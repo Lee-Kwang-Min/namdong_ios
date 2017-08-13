@@ -22,6 +22,47 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         webView.loadRequest(request)
 //        KRProgressHUD.show()
     }
+    
+    func callFunc(_ url: String?) -> Bool{
+        let funcPrefix = "jscall://"
+        if let urlString = url, urlString.hasPrefix(funcPrefix) {
+            let subString = urlString.substring(from: funcPrefix.endIndex)
+            let funcArray = subString.components(separatedBy: "?")
+            let funcName = funcArray[0]
+            let bodies = funcArray[1].components(separatedBy: "&")
+            var funcBody = Dictionary<String, String>()
+            
+            for row in bodies {
+                let result  = row.components(separatedBy: "=")
+                let key     = result[0].trimmingCharacters(in: NSCharacterSet.whitespaces)
+                let value   = result[1].trimmingCharacters(in: NSCharacterSet.whitespaces)
+                funcBody.updateValue(value, forKey: key)
+            }
+            
+            switch funcName {
+            case "showToast":
+                showToast(message: funcBody["message"]!)
+                
+            case "showAlertDialog":
+                showDialog(title: funcBody["title"]!, message: funcBody["message"]!)
+                
+            default:
+                break
+            }
+            
+            return false;
+        }
+        
+        return true;
+    }
+    
+    func showToast(message: String){
+        print("toast message", message)
+    }
+    
+    func showDialog(title: String, message: String){
+        print("showAlertDialog", title, message);
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,6 +73,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
 //        KRProgressHUD.dismiss()
     }
+        let result = callFunc(request.url?.absoluteString)
 
     /*
     // MARK: - Navigation
