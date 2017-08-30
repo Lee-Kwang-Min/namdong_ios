@@ -9,6 +9,7 @@ target 'Namdong' do
 
   # Pods for Namdong
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'Toaster', '~> 2.0'
 
 end
