@@ -25,6 +25,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     func callFunc(_ url: String?) -> Bool{
         let funcPrefix = "jscall://"
+        let intentPrefix = "intent://"
         if let urlString = url, urlString.hasPrefix(funcPrefix) {
             let subString = urlString.substring(from: funcPrefix.endIndex)
             let funcArray = subString.components(separatedBy: "?")
@@ -53,7 +54,78 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             return false;
         }
         
+        if let urlString = url, urlString.hasPrefix(intentPrefix) {
+            let subString = urlString.substring(from: funcPrefix.endIndex)
+            var urlString = ""
+            var platformName = ""
+            var installUrlString = ""
+            switch subString {
+            case "com.kakao.talk":
+                platformName = NSLocalizedString("KakaoTalk", comment: "App name KakaoTalk")
+                urlString = "kakaolink://"
+                installUrlString = "https://itunes.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-kakaotalk/id362057947?mt=8"
+                break
+            case "com.facebook.katana":
+                platformName = NSLocalizedString("Facebook", comment: "App name Facebook")
+                urlString = "fb://"
+                installUrlString = "https://itunes.apple.com/kr/app/facebook/id284882215?mt=8"
+                break
+            case "com.tencent.mm":
+                platformName = NSLocalizedString("WeChat", comment: "App name WeChat")
+                urlString = "weixin://"
+                installUrlString = "https://itunes.apple.com/kr/app/wechat/id414478124?mt=8"
+                break
+                
+            default:
+                break
+            }
+            
+            self.openUrl(urlString) { (isOpenable) in
+                if !isOpenable {
+                    let alertController = UIAlertController.init(title: NSLocalizedString("Open failed", comment: ""), message: String.init(format: NSLocalizedString("Can't open %@. Install the app for use this function.", comment: ""), platformName), preferredStyle: .alert)
+                    let actionCancel = UIAlertAction.init(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil)
+                    let actionInstall = UIAlertAction.init(title: NSLocalizedString("Appstore", comment: ""), style: .default, handler: { (aletAction) in
+                        self.openUrl(installUrlString)
+                    })
+                    alertController.addAction(actionCancel)
+                    alertController.addAction(actionInstall)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+            
+            return false;
+        }
+        
+        
         return true;
+    }
+    
+    /// Url Openner
+    ///
+    /// - Parameters:
+    ///   - urlString: url string
+    ///   - completion: call back closure
+    func openUrl(_ urlString: String, _ completion: CompletionHandler? = nil){
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let openable = UIApplication.shared.canOpenURL(url)
+        if openable {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: { (finished) in
+                    
+                })
+            } else {
+                // Fallback on earlier versions
+                UIApplication.shared.openURL(url)
+            }
+        }
+        
+        if (completion != nil) {
+            completion!(openable)
+        }
     }
     
     func showToast(message: String){
@@ -73,7 +145,11 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
 //        KRProgressHUD.dismiss()
     }
+    
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         let result = callFunc(request.url?.absoluteString)
+        return result
+    }
 
     /*
     // MARK: - Navigation
