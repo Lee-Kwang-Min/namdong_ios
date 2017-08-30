@@ -36,16 +36,21 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         let intentPrefix = "intent://"
         if let urlString = url, urlString.hasPrefix(funcPrefix) {
             let subString = urlString.substring(from: funcPrefix.endIndex)
-            let funcArray = subString.components(separatedBy: "?")
-            let funcName = funcArray[0]
-            let bodies = funcArray[1].components(separatedBy: "&")
+            var funcName = ""
             var funcBody = Dictionary<String, String>()
-            
-            for row in bodies {
-                let result  = row.components(separatedBy: "=")
-                let key     = result[0].trimmingCharacters(in: NSCharacterSet.whitespaces)
-                let value   = result[1].trimmingCharacters(in: NSCharacterSet.whitespaces)
-                funcBody.updateValue(value, forKey: key)
+            if subString.contains("?") {
+                let funcArray = subString.components(separatedBy: "?")
+                funcName = funcArray[0]
+                let bodies = funcArray[1].components(separatedBy: "&")
+                
+                for row in bodies {
+                    let result  = row.components(separatedBy: "=")
+                    let key     = result[0].trimmingCharacters(in: NSCharacterSet.whitespaces)
+                    let value   = result[1].trimmingCharacters(in: NSCharacterSet.whitespaces)
+                    funcBody.updateValue(value, forKey: key)
+                }
+            }else{
+                funcName = subString;
             }
             
             switch funcName {
