@@ -20,9 +20,12 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         // Do any additional setup after loading the view.
         let request = URLRequest.init(url: URL(string: targetUrl)!)
         webView.loadRequest(request)
-//        KRProgressHUD.show()
     }
     
+    /// Function caller
+    ///
+    /// - Parameter url: Scheme url
+    /// - Returns: Result of processing.
     func callFunc(_ url: String?) -> Bool{
         let funcPrefix = "jscall://"
         let intentPrefix = "intent://"
@@ -128,11 +131,19 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    /// Show Toast
+    ///
+    /// - Parameter message: Message to be shown on toast
     func showToast(message: String){
         let toast = Toast(text: message)
         toast.show()
     }
     
+    /// Show Dialog
+    ///
+    /// - Parameters:
+    ///   - title: Title to be shown on alert box
+    ///   - message: Message to be shown on alert box
     func showDialog(title: String, message: String){
         let controller = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         let actionOK = UIAlertAction.init(title: NSLocalizedString("OK", comment: "OK button"), style: .default, handler: nil);
@@ -147,7 +158,6 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     // MARK: - UIWebView Delegate
     func webViewDidFinishLoad(_ webView: UIWebView) {
-//        KRProgressHUD.dismiss()
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
