@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let urlString = urlLink {
                 // move to url
             }
+        let iconImage = UIImage.init(named: "AppIcon60x60")
         }
     }
     
