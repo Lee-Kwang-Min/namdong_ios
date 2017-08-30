@@ -12,12 +12,17 @@ import Toaster
 class MainViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
-    var targetUrl = "http://www.naver.com"
+    var targetUrl = "http://google.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.loadWebViewMain()
+    }
+    
+    /// Load webview main page
+    func loadWebViewMain() {
         let request = URLRequest.init(url: URL(string: targetUrl)!)
         webView.loadRequest(request)
     }
@@ -49,6 +54,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                 
             case "showAlertDialog":
                 showDialog(title: funcBody["title"]!, message: funcBody["message"]!)
+                
+            case "mainPageReload":
+                self.loadWebViewMain()
                 
             default:
                 break
@@ -158,6 +166,23 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     // MARK: - UIWebView Delegate
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        guard let request = webView.request else { return }
+        
+        let cachedUrlResponse = URLCache.shared.cachedResponse(for: request)
+        let httpUrlResponse = cachedUrlResponse?.response as? HTTPURLResponse
+        if let statusCode = httpUrlResponse?.statusCode {
+            if statusCode == 404 {
+                // Handling 404 response
+                do{
+                    let htmlPath = Bundle.main.path(forResource: "notFound", ofType: "html");
+                    let htmlString = try String.init(contentsOfFile: htmlPath!, encoding: String.Encoding.utf8)
+                    
+                    webView.loadHTMLString(htmlString, baseURL: nil)
+                }catch{
+                    NSLog("HTML File load error")
+                }
+            }
+        }
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
