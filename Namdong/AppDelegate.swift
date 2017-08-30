@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import UserNotifications
+import RNNotificationView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let keyCookie = "Cookie"
 
     let gcmMessageIDKey = "gcm.message_id"
+    let apsKey = "aps"
+    let dataKey = "data"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -44,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         return true
+    }
+    
+    func showNotification(_ object: Dictionary<String, String>){
+        let info = Bundle.main.infoDictionary!
+        let appName = info[kCFBundleNameKey as String] as! String
+        let message = object["body"] as! String
+        let urlLink = object["link_url"]
+        RNNotificationView.show(withImage: nil, title: appName, message: message) { 
+            if let urlString = urlLink {
+                // move to url
+            }
+        }
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
@@ -149,13 +164,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-        }
         
-        // Print full message.
-        print(userInfo)
+        let object = userInfo[dataKey] as! Dictionary<String, String>
+        self.showNotification(object)
         
         // Change this to your preferred presentation option
         completionHandler([])
@@ -165,13 +176,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-        }
         
-        // Print full message.
-        print(userInfo)
+        let object = userInfo[apsKey] as! Dictionary<String, String>
+        self.showNotification(object)
         
         completionHandler()
     }
