@@ -126,6 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let cookieCount = cookies?.count, cookieCount > 0 {
             let cookieData = NSKeyedArchiver.archivedData(withRootObject: cookies as Any)
             UserDefaults.standard.set(cookieData, forKey: keyCookie)
+            UserDefaults.standard.synchronize()
         }
     }
 

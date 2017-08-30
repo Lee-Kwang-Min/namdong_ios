@@ -8,6 +8,7 @@
 
 import UIKit
 import Toaster
+import Firebase
 
 class MainViewController: UIViewController, UIWebViewDelegate {
     
@@ -23,8 +24,24 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     /// Load webview main page
     func loadWebViewMain() {
-        let request = URLRequest.init(url: URL(string: targetUrl)!)
-        webView.loadRequest(request)
+        
+        let fcmToken = Messaging.messaging().fcmToken
+        let userId = ApplicationData.shared.getUserLoginID()
+        if ApplicationData.shared.isUseAutoLogin() && userId.characters.count > 0 {
+            // 자동 로그인
+            let requestUrl = ApplicationData.shared.getAutoLoginUrl()
+            var request = URLRequest.init(url: URL(string: requestUrl)!)
+            request.httpMethod = "POST"
+            request.httpBody = ("eTokenId" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
+            
+            webView.loadRequest(request)
+        }else{
+            // 일반 로그인
+            var request = URLRequest.init(url: URL(string: targetUrl)!)
+            request.httpMethod = "POST"
+            request.httpBody = ("eTokenId" + fcmToken! + "&eDevice=I").data(using: .utf8)
+            webView.loadRequest(request)
+        }
     }
     
     /// Function caller
