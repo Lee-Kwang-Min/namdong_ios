@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7ACACE06949DDA1FB74CA9004CFEAB5A</key>
+		<key>9A5BF967ED653AE0C1E093866CB30D97</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD3279B4E9EDCCCDA6500F3E66078A07</key>
 		<dict>
 			<key>primary</key>
 			<true/>

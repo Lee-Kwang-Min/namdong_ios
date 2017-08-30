@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, ‘8.0’
 
 project 'Namdong.xcodeproj'
 
@@ -9,5 +9,6 @@ target 'Namdong' do
 
   # Pods for Namdong
   pod 'Firebase/Core'
+  pod 'Toaster', '~> 2.0'
 
 end
