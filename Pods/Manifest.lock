@@ -32,11 +32,13 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
+  - RNNotificationView (2.0.1)
   - Toaster (2.0.4)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
+  - RNNotificationView (~> 2.0)
   - Toaster (~> 2.0)
 
 SPEC CHECKSUMS:
@@ -48,8 +50,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
+  RNNotificationView: ba64eb4d03ebf047ca23223e2590761f70b846c9
   Toaster: f13031c636ef065281bc11857be9a16c7659e04f
 
-PODFILE CHECKSUM: e62be061a838eebdcaef644470a6d21e00ec510e
+PODFILE CHECKSUM: 39c924bf9468ada5fd0067659107f8e79fc1c593
 
 COCOAPODS: 1.2.1

@@ -11,5 +11,6 @@ target 'Namdong' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'Toaster', '~> 2.0'
+  pod 'RNNotificationView', '~> 2.0'
 
 end
