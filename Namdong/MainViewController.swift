@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import KRProgressHUD
+import Toaster
 
 class MainViewController: UIViewController, UIWebViewDelegate {
     
@@ -129,11 +129,15 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     }
     
     func showToast(message: String){
-        print("toast message", message)
+        let toast = Toast(text: message)
+        toast.show()
     }
     
     func showDialog(title: String, message: String){
-        print("showAlertDialog", title, message);
+        let controller = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        let actionOK = UIAlertAction.init(title: NSLocalizedString("OK", comment: "OK button"), style: .default, handler: nil);
+        controller.addAction(actionOK)
+        self.present(controller, animated: true, completion: nil);
     }
 
     override func didReceiveMemoryWarning() {
