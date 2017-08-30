@@ -8,23 +8,49 @@
 
 import UIKit
 
+enum ContentMode {
+    case nscs, nsop, dycs, dyop
+}
+
 class ApplicationData: NSObject {
 
     static let shared = ApplicationData()
     
-    let kServerUrl = "http://210.113.16.214/"
+    let kServerUrl  = "http://210.113.16.214/"
     var contentType = ContentMode.nscs  // defaultValue
+    var cookieData  = Dictionary<String, String>()
+    var fcmToken    = ""
     
-    enum ContentMode {
-        case nscs, nsop, dycs, dyop
-    }
     
     override init() {
         
     }
     
-    func setCookieData(data: String){
+    /// 자동로그인 판단
+    ///
+    /// - Returns: 자동로그인 사용 여부를 반환
+    func isUseAutoLogin() -> Bool {
+        if cookieData.count == 0 {
+            self.loadCookieData()
+        }
         
+        let key = self.getAutoLoginKey()
+        
+        let autoLogin = cookieData[key]
+        guard autoLogin != nil else {
+            return false
+        }
+        
+        return autoLogin == "Y"
+    }
+    
+    func loadCookieData(){
+        for cookie in HTTPCookieStorage.shared.cookies! {
+            if cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType) {
+                print("\(cookie.name) \n\n \(cookie.value) \n\n \(cookie.version) \n\n \(cookie)")
+                cookieData.updateValue(cookie.value, forKey: cookie.name)
+            }
+        }
     }
     
     func getCookieUrl(type: ContentMode) -> String{
@@ -47,16 +73,24 @@ class ApplicationData: NSObject {
     }
     
     func getUserLoginID() -> String{
-        let loginKey = self.getUserLoginIDKey(type: self.contentType)
-        // 값에서 가져오기.
+        if cookieData.count == 0 {
+            self.loadCookieData()
+        }
         
-        return ""
+        let key = self.getUserLoginIDKey()
+        
+        let userId = cookieData[key]
+        guard userId != nil else {
+            return ""
+        }
+        
+        return userId!
     }
     
-    func getAutoLoginKey(type: ContentMode) -> String{
+    func getAutoLoginKey() -> String{
         var result = ""
         
-        switch type {
+        switch self.contentType {
         case .nscs:
             result = "eMobile_nscseMobile_auto"
             
@@ -72,10 +106,10 @@ class ApplicationData: NSObject {
         return result
     }
     
-    func getUserLoginIDKey(type: ContentMode) -> String{
+    func getUserLoginIDKey() -> String{
         var result = ""
         
-        switch type {
+        switch self.contentType {
         case .nscs:
             result = "eMobile_nscseMobile_usrlogin"
             
