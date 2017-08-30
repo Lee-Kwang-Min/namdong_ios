@@ -95,19 +95,24 @@ class ViewController: UIViewController {
     }
 
     @IBAction func moveManageNamsung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["남성 관리자", "http://www.namsung.co.kr"])
+        performSegue(withIdentifier: "showWeb", sender: ["남성 관리자", ApplicationData.shared.kServerUrl + "/NS_MOBILE_OP/login/loginOP.do"])
+        ApplicationData.shared.contentType = .nsop
+        
     }
     
     @IBAction func moveManagerDongyoung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["동영 관리자", "http://www.pcsline.co.kr"])
+        performSegue(withIdentifier: "showWeb", sender: ["동영 관리자", ApplicationData.shared.kServerUrl + "DY_MOBILE_OP/login/loginOP.do"])
+        ApplicationData.shared.contentType = .dyop
     }
     
     @IBAction func moveUserNamsung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["남성 사용자", "http://www.namsung.co.kr"])
+        performSegue(withIdentifier: "showWeb", sender: ["남성 사용자", ApplicationData.shared.kServerUrl + "/NS_MOBILE_CS/login/viewMain.do"])
+        ApplicationData.shared.contentType = .nscs
     }
     
     @IBAction func moveUserDongyoung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["동영 사용자", "http://www.pcsline.co.kr"])
+        performSegue(withIdentifier: "showWeb", sender: ["동영 사용자", ApplicationData.shared.kServerUrl + "/DY_MOBILE_CS/login/viewMain.do"])
+        ApplicationData.shared.contentType = .dycs
     }
 
 }
