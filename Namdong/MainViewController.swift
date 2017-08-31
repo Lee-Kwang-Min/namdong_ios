@@ -32,14 +32,15 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             let requestUrl = ApplicationData.shared.getAutoLoginUrl()
             var request = URLRequest.init(url: URL(string: requestUrl)!)
             request.httpMethod = "POST"
-            request.httpBody = ("eTokenId" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
+            request.httpBody = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
             
             webView.loadRequest(request)
         }else{
             // 일반 로그인
             var request = URLRequest.init(url: URL(string: targetUrl)!)
+            let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
             request.httpMethod = "POST"
-            request.httpBody = ("eTokenId" + fcmToken! + "&eDevice=I").data(using: .utf8)
+            request.httpBody = body.data(using: .utf8)
             webView.loadRequest(request)
         }
     }
