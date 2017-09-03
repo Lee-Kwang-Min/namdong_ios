@@ -17,6 +17,8 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.scrollView.bounces = false
+        webView.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view.
         self.loadWebViewMain()

@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bQ2-ge-Gek">
             <objects>
-                <navigationController id="lvL-60-Vc2" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="lvL-60-Vc2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRb-1n-TvC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
