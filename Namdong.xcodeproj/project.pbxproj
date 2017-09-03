@@ -8,13 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		6E3EB0D52C35612DE14C9E60 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
-		830DE6791F56840E00EFBF2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830DE6771F56840E00EFBF2F /* GoogleService-Info.plist */; };
 		830DE67E1F56B61500EFBF2F /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
+		832080BE1F5BF2E10083B994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
+		832080BF1F5BF2E10083B994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
+		832080C01F5BF2E10083B994 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
+		832080C11F5BF2E10083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
+		832080C31F5BF2E10083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
+		832080C41F5BF2E10083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
+		832080C51F5BF2E10083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
+		832080C81F5BF2E10083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
+		832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
+		832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
+		832080D41F5BF77F0083B994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832080D31F5BF77F0083B994 /* LaunchScreen.storyboard */; };
+		832080D51F5BF8060083B994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D201F2F6B8D00A4803D /* LaunchScreen.storyboard */; };
+		832080DA1F5BFB7F0083B994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832080D71F5BFB7F0083B994 /* GoogleService-Info.plist */; };
+		832080DC1F5BFB890083B994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832080D91F5BFB7F0083B994 /* GoogleService-Info.plist */; };
+		832080E01F5BFD0E0083B994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
+		832080E11F5BFD0E0083B994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
+		832080E21F5BFD0E0083B994 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
+		832080E31F5BFD0E0083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
+		832080E51F5BFD0E0083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
+		832080E61F5BFD0E0083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
+		832080E71F5BFD0E0083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
+		832080E91F5BFD0E0083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
+		832080EA1F5BFD0E0083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
+		832080EC1F5BFD0E0083B994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D201F2F6B8D00A4803D /* LaunchScreen.storyboard */; };
+		832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
+		832080F81F5BFD530083B994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
+		832080F91F5BFD530083B994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
+		832080FA1F5BFD530083B994 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
+		832080FB1F5BFD530083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
+		832080FD1F5BFD530083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
+		832080FE1F5BFD530083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
+		832080FF1F5BFD530083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
+		832081011F5BFD530083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
+		832081021F5BFD530083B994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832080D31F5BF77F0083B994 /* LaunchScreen.storyboard */; };
+		832081041F5BFD530083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
+		832081051F5BFD530083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
+		8320810F1F5BFE060083B994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8320810E1F5BFE060083B994 /* GoogleService-Info.plist */; };
+		832081121F5BFE3E0083B994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832081111F5BFE3E0083B994 /* GoogleService-Info.plist */; };
 		83232D181F2F6B8D00A4803D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
 		83232D1A1F2F6B8D00A4803D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
 		83232D1D1F2F6B8D00A4803D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
 		83232D1F1F2F6B8D00A4803D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
-		83232D221F2F6B8D00A4803D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D201F2F6B8D00A4803D /* LaunchScreen.storyboard */; };
 		83232D481F2F7F0500A4803D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
 		835375BE1F5663100025FBE1 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
 		835375C11F566B240025FBE1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
@@ -24,10 +60,20 @@
 /* Begin PBXFileReference section */
 		062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Namdong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Namdong/Pods-Namdong.debug.xcconfig"; sourceTree = "<group>"; };
 		112A10C539DCE9205AED451D /* Pods_Namdong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Namdong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		830DE6771F56840E00EFBF2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		830DE67A1F56842E00EFBF2F /* Namdong.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Namdong.entitlements; sourceTree = "<group>"; };
 		830DE67D1F56B61500EFBF2F /* ApplicationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
-		83232D141F2F6B8D00A4803D /* Namdong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Namdong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832080D11F5BF2E10083B994 /* DongyoungCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongyoungCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832080D21F5BF2E20083B994 /* DongyoungCS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DongyoungCS-Info.plist"; path = "/Users/chris/Project/namdong_ios/DongyoungCS-Info.plist"; sourceTree = "<absolute>"; };
+		832080D31F5BF77F0083B994 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/DY/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		832080D71F5BFB7F0083B994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		832080D91F5BFB7F0083B994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		832080F31F5BFD0E0083B994 /* NamdongOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamdongOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832080F41F5BFD0F0083B994 /* NamsungOP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NamsungOP-Info.plist"; path = "/Users/chris/Project/namdong_ios/NamsungOP-Info.plist"; sourceTree = "<absolute>"; };
+		8320810B1F5BFD530083B994 /* DongyoungOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongyoungOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8320810C1F5BFD540083B994 /* DongyoungOP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DongyoungOP-Info.plist"; path = "/Users/chris/Project/namdong_ios/DongyoungOP-Info.plist"; sourceTree = "<absolute>"; };
+		8320810E1F5BFE060083B994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		832081111F5BFE3E0083B994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83232D141F2F6B8D00A4803D /* NamdongCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamdongCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83232D171F2F6B8D00A4803D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83232D191F2F6B8D00A4803D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83232D1C1F2F6B8D00A4803D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +88,36 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		832080C21F5BF2E10083B994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080C31F5BF2E10083B994 /* PushKit.framework in Frameworks */,
+				832080C41F5BF2E10083B994 /* UserNotifications.framework in Frameworks */,
+				832080C51F5BF2E10083B994 /* Pods_Namdong.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832080E41F5BFD0E0083B994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080E51F5BFD0E0083B994 /* PushKit.framework in Frameworks */,
+				832080E61F5BFD0E0083B994 /* UserNotifications.framework in Frameworks */,
+				832080E71F5BFD0E0083B994 /* Pods_Namdong.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832080FC1F5BFD530083B994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080FD1F5BFD530083B994 /* PushKit.framework in Frameworks */,
+				832080FE1F5BFD530083B994 /* UserNotifications.framework in Frameworks */,
+				832080FF1F5BFD530083B994 /* Pods_Namdong.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83232D111F2F6B8D00A4803D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,9 +153,44 @@
 		830DE6761F56840E00EFBF2F /* Certification */ = {
 			isa = PBXGroup;
 			children = (
-				830DE6771F56840E00EFBF2F /* GoogleService-Info.plist */,
+				832080D61F5BFB7F0083B994 /* dycs */,
+				8320810D1F5BFE060083B994 /* dyop */,
+				832080D81F5BFB7F0083B994 /* nscs */,
+				832081101F5BFE3E0083B994 /* nsop */,
 			);
 			path = Certification;
+			sourceTree = "<group>";
+		};
+		832080D61F5BFB7F0083B994 /* dycs */ = {
+			isa = PBXGroup;
+			children = (
+				832080D71F5BFB7F0083B994 /* GoogleService-Info.plist */,
+			);
+			path = dycs;
+			sourceTree = "<group>";
+		};
+		832080D81F5BFB7F0083B994 /* nscs */ = {
+			isa = PBXGroup;
+			children = (
+				832080D91F5BFB7F0083B994 /* GoogleService-Info.plist */,
+			);
+			path = nscs;
+			sourceTree = "<group>";
+		};
+		8320810D1F5BFE060083B994 /* dyop */ = {
+			isa = PBXGroup;
+			children = (
+				8320810E1F5BFE060083B994 /* GoogleService-Info.plist */,
+			);
+			path = dyop;
+			sourceTree = "<group>";
+		};
+		832081101F5BFE3E0083B994 /* nsop */ = {
+			isa = PBXGroup;
+			children = (
+				832081111F5BFE3E0083B994 /* GoogleService-Info.plist */,
+			);
+			path = nsop;
 			sourceTree = "<group>";
 		};
 		83232D0B1F2F6B8D00A4803D = {
@@ -90,13 +201,19 @@
 				83232D151F2F6B8D00A4803D /* Products */,
 				4397E713D2040B9B2C9A5CE7 /* Pods */,
 				3B34D2562A46959E3DB195B1 /* Frameworks */,
+				832080D21F5BF2E20083B994 /* DongyoungCS-Info.plist */,
+				832080F41F5BFD0F0083B994 /* NamsungOP-Info.plist */,
+				8320810C1F5BFD540083B994 /* DongyoungOP-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		83232D151F2F6B8D00A4803D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83232D141F2F6B8D00A4803D /* Namdong.app */,
+				83232D141F2F6B8D00A4803D /* NamdongCS.app */,
+				832080D11F5BF2E10083B994 /* DongyoungCS.app */,
+				832080F31F5BFD0E0083B994 /* NamdongOP.app */,
+				8320810B1F5BFD530083B994 /* DongyoungOP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +227,7 @@
 				83232D1B1F2F6B8D00A4803D /* Main.storyboard */,
 				83232D1E1F2F6B8D00A4803D /* Assets.xcassets */,
 				83232D201F2F6B8D00A4803D /* LaunchScreen.storyboard */,
+				832080D31F5BF77F0083B994 /* LaunchScreen.storyboard */,
 				83232D231F2F6B8D00A4803D /* Info.plist */,
 				83232D471F2F7F0500A4803D /* MainViewController.swift */,
 				830DE67D1F56B61500EFBF2F /* ApplicationData.swift */,
@@ -138,9 +256,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83232D131F2F6B8D00A4803D /* Namdong */ = {
+		832080BB1F5BF2E10083B994 /* DongyoungCS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83232D261F2F6B8D00A4803D /* Build configuration list for PBXNativeTarget "Namdong" */;
+			buildConfigurationList = 832080CE1F5BF2E10083B994 /* Build configuration list for PBXNativeTarget "DongyoungCS" */;
+			buildPhases = (
+				832080BC1F5BF2E10083B994 /* [CP] Check Pods Manifest.lock */,
+				832080BD1F5BF2E10083B994 /* Sources */,
+				832080C21F5BF2E10083B994 /* Frameworks */,
+				832080C61F5BF2E10083B994 /* Resources */,
+				832080CC1F5BF2E10083B994 /* [CP] Embed Pods Frameworks */,
+				832080CD1F5BF2E10083B994 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DongyoungCS;
+			productName = Namdong;
+			productReference = 832080D11F5BF2E10083B994 /* DongyoungCS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		832080DD1F5BFD0E0083B994 /* NamdongOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832080F01F5BFD0E0083B994 /* Build configuration list for PBXNativeTarget "NamdongOP" */;
+			buildPhases = (
+				832080DE1F5BFD0E0083B994 /* [CP] Check Pods Manifest.lock */,
+				832080DF1F5BFD0E0083B994 /* Sources */,
+				832080E41F5BFD0E0083B994 /* Frameworks */,
+				832080E81F5BFD0E0083B994 /* Resources */,
+				832080EE1F5BFD0E0083B994 /* [CP] Embed Pods Frameworks */,
+				832080EF1F5BFD0E0083B994 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NamdongOP;
+			productName = Namdong;
+			productReference = 832080F31F5BFD0E0083B994 /* NamdongOP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		832080F51F5BFD530083B994 /* DongyoungOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832081081F5BFD530083B994 /* Build configuration list for PBXNativeTarget "DongyoungOP" */;
+			buildPhases = (
+				832080F61F5BFD530083B994 /* [CP] Check Pods Manifest.lock */,
+				832080F71F5BFD530083B994 /* Sources */,
+				832080FC1F5BFD530083B994 /* Frameworks */,
+				832081001F5BFD530083B994 /* Resources */,
+				832081061F5BFD530083B994 /* [CP] Embed Pods Frameworks */,
+				832081071F5BFD530083B994 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DongyoungOP;
+			productName = Namdong;
+			productReference = 8320810B1F5BFD530083B994 /* DongyoungOP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83232D131F2F6B8D00A4803D /* NamdongCS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83232D261F2F6B8D00A4803D /* Build configuration list for PBXNativeTarget "NamdongCS" */;
 			buildPhases = (
 				73E91F85C5743C366AB6BC89 /* [CP] Check Pods Manifest.lock */,
 				83232D101F2F6B8D00A4803D /* Sources */,
@@ -153,9 +331,9 @@
 			);
 			dependencies = (
 			);
-			name = Namdong;
+			name = NamdongCS;
 			productName = Namdong;
-			productReference = 83232D141F2F6B8D00A4803D /* Namdong.app */;
+			productReference = 83232D141F2F6B8D00A4803D /* NamdongCS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,6 +346,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Chris Song";
 				TargetAttributes = {
+					832080BB1F5BF2E10083B994 = {
+						DevelopmentTeam = Y35UZF39KG;
+					};
+					832080DD1F5BFD0E0083B994 = {
+						DevelopmentTeam = 65V42A4R5T;
+					};
+					832080F51F5BFD530083B994 = {
+						DevelopmentTeam = Y35UZF39KG;
+					};
 					83232D131F2F6B8D00A4803D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 65V42A4R5T;
@@ -196,20 +383,59 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83232D131F2F6B8D00A4803D /* Namdong */,
+				83232D131F2F6B8D00A4803D /* NamdongCS */,
+				832080BB1F5BF2E10083B994 /* DongyoungCS */,
+				832080DD1F5BFD0E0083B994 /* NamdongOP */,
+				832080F51F5BFD530083B994 /* DongyoungOP */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		832080C61F5BF2E10083B994 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080C81F5BF2E10083B994 /* notFound.html in Resources */,
+				832080D41F5BF77F0083B994 /* LaunchScreen.storyboard in Resources */,
+				832080DA1F5BFB7F0083B994 /* GoogleService-Info.plist in Resources */,
+				832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */,
+				832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832080E81F5BFD0E0083B994 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080E91F5BFD0E0083B994 /* notFound.html in Resources */,
+				832080EA1F5BFD0E0083B994 /* Assets.xcassets in Resources */,
+				832080EC1F5BFD0E0083B994 /* LaunchScreen.storyboard in Resources */,
+				832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */,
+				832081121F5BFE3E0083B994 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832081001F5BFD530083B994 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832081011F5BFD530083B994 /* notFound.html in Resources */,
+				832081021F5BFD530083B994 /* LaunchScreen.storyboard in Resources */,
+				832081041F5BFD530083B994 /* Assets.xcassets in Resources */,
+				832081051F5BFD530083B994 /* Main.storyboard in Resources */,
+				8320810F1F5BFE060083B994 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83232D121F2F6B8D00A4803D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83232D221F2F6B8D00A4803D /* LaunchScreen.storyboard in Resources */,
 				835375BE1F5663100025FBE1 /* notFound.html in Resources */,
-				830DE6791F56840E00EFBF2F /* GoogleService-Info.plist in Resources */,
 				83232D1F1F2F6B8D00A4803D /* Assets.xcassets in Resources */,
+				832080DC1F5BFB890083B994 /* GoogleService-Info.plist in Resources */,
+				832080D51F5BF8060083B994 /* LaunchScreen.storyboard in Resources */,
 				83232D1D1F2F6B8D00A4803D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +481,165 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		832080BC1F5BF2E10083B994 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		832080CC1F5BF2E10083B994 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832080CD1F5BF2E10083B994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832080DE1F5BFD0E0083B994 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		832080EE1F5BFD0E0083B994 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832080EF1F5BFD0E0083B994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832080F61F5BFD530083B994 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		832081061F5BFD530083B994 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		832081071F5BFD530083B994 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C0750D837ECF189507167A61 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +658,39 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		832080BD1F5BF2E10083B994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080BE1F5BF2E10083B994 /* MainViewController.swift in Sources */,
+				832080BF1F5BF2E10083B994 /* ViewController.swift in Sources */,
+				832080C01F5BF2E10083B994 /* ApplicationData.swift in Sources */,
+				832080C11F5BF2E10083B994 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832080DF1F5BFD0E0083B994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080E01F5BFD0E0083B994 /* MainViewController.swift in Sources */,
+				832080E11F5BFD0E0083B994 /* ViewController.swift in Sources */,
+				832080E21F5BFD0E0083B994 /* ApplicationData.swift in Sources */,
+				832080E31F5BFD0E0083B994 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832080F71F5BFD530083B994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832080F81F5BFD530083B994 /* MainViewController.swift in Sources */,
+				832080F91F5BFD530083B994 /* ViewController.swift in Sources */,
+				832080FA1F5BFD530083B994 /* ApplicationData.swift in Sources */,
+				832080FB1F5BFD530083B994 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83232D101F2F6B8D00A4803D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +724,108 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		832080CF1F5BF2E10083B994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
+				BUNDLE_ID_SUFFIX = dycs;
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = Y35UZF39KG;
+				INFOPLIST_FILE = "DongyoungCS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		832080D01F5BF2E10083B994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
+				BUNDLE_ID_SUFFIX = dycs;
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = Y35UZF39KG;
+				INFOPLIST_FILE = "DongyoungCS-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		832080F11F5BFD0E0083B994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = 65V42A4R5T;
+				INFOPLIST_FILE = "$(SRCROOT)/NamsungOP-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		832080F21F5BFD0E0083B994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = 65V42A4R5T;
+				INFOPLIST_FILE = "$(SRCROOT)/NamsungOP-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		832081091F5BFD530083B994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
+				BUNDLE_ID_SUFFIX = dycs;
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = Y35UZF39KG;
+				INFOPLIST_FILE = "$(SRCROOT)/DongyoungOP-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8320810A1F5BFD530083B994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
+				BUNDLE_ID_SUFFIX = dycs;
+				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
+				DEVELOPMENT_TEAM = Y35UZF39KG;
+				INFOPLIST_FILE = "$(SRCROOT)/DongyoungOP-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		83232D241F2F6B8D00A4803D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -385,6 +905,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -404,6 +925,7 @@
 			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
 				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
@@ -411,7 +933,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -420,6 +942,7 @@
 			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
 				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
@@ -427,13 +950,40 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		832080CE1F5BF2E10083B994 /* Build configuration list for PBXNativeTarget "DongyoungCS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832080CF1F5BF2E10083B994 /* Debug */,
+				832080D01F5BF2E10083B994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832080F01F5BFD0E0083B994 /* Build configuration list for PBXNativeTarget "NamdongOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832080F11F5BFD0E0083B994 /* Debug */,
+				832080F21F5BFD0E0083B994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832081081F5BFD530083B994 /* Build configuration list for PBXNativeTarget "DongyoungOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832081091F5BFD530083B994 /* Debug */,
+				8320810A1F5BFD530083B994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83232D0F1F2F6B8D00A4803D /* Build configuration list for PBXProject "Namdong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -443,7 +993,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83232D261F2F6B8D00A4803D /* Build configuration list for PBXNativeTarget "Namdong" */ = {
+		83232D261F2F6B8D00A4803D /* Build configuration list for PBXNativeTarget "NamdongCS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83232D271F2F6B8D00A4803D /* Debug */,

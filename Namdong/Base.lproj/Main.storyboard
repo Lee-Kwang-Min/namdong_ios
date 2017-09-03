@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4hR-Rc-1UZ"/>
+                        <segue destination="ie9-Ni-YLe" kind="relationship" relationship="rootViewController" id="D3y-54-ymz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JlY-DP-RX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,7 +28,7 @@
         <!--테스트-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Namdong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DongyoungCS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -98,7 +98,7 @@
         <!--Main View Controller-->
         <scene sceneID="sQJ-NF-8lC">
             <objects>
-                <viewController id="ie9-Ni-YLe" customClass="MainViewController" customModule="Namdong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ie9-Ni-YLe" customClass="MainViewController" customModule="DongyoungCS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IOg-dV-Lm2"/>
                         <viewControllerLayoutGuide type="bottom" id="woM-9D-ZIF"/>
@@ -123,6 +123,7 @@
                             <constraint firstItem="woM-9D-ZIF" firstAttribute="top" secondItem="ppS-Wv-pH0" secondAttribute="bottom" id="sA9-4B-Q0I"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HMx-UD-CgP"/>
                     <connections>
                         <outlet property="webView" destination="ppS-Wv-pH0" id="MgI-5w-G8u"/>
                     </connections>
@@ -132,4 +133,7 @@
             <point key="canvasLocation" x="924" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="D3y-54-ymz"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>927985573843-uvhd3t0u5psmoulimfun0n8ch6e68l7c.apps.googleusercontent.com</string>
+	<string>579166327030-0ffvqll5i2i06m3vtcjlh724v2a7he6v.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.927985573843-uvhd3t0u5psmoulimfun0n8ch6e68l7c</string>
+	<string>com.googleusercontent.apps.579166327030-0ffvqll5i2i06m3vtcjlh724v2a7he6v</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCFbn0SV2m-xmVU-xgbwNjGHp4_OLt07k4</string>
+	<string>AIzaSyDKyJpHdzJIwN4Tp-6S-CcL-s13l-oeMs4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>927985573843</string>
+	<string>579166327030</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>kr.co.pcsline.cs</string>
+	<string>kr.co.pcsline.op</string>
 	<key>PROJECT_ID</key>
-	<string>donyoungcs</string>
+	<string>dongyoungop</string>
 	<key>STORAGE_BUCKET</key>
-	<string>donyoungcs.appspot.com</string>
+	<string>dongyoungop.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:927985573843:ios:ed31b7dc854e15e6</string>
+	<string>1:579166327030:ios:87ef491b7c3fe4a4</string>
 	<key>DATABASE_URL</key>
-	<string>https://donyoungcs.firebaseio.com</string>
+	<string>https://dongyoungop.firebaseio.com</string>
 </dict>
 </plist>

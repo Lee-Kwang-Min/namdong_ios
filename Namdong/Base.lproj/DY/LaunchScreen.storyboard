@@ -21,18 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NS_LOGO_CS" translatesAutoresizingMaskIntoConstraints="NO" id="z2n-Pt-edA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DY_LOGO_CS" translatesAutoresizingMaskIntoConstraints="NO" id="DcH-4H-ndk">
                                 <rect key="frame" x="59" y="205" width="256" height="256"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="Cqp-IA-InO"/>
-                                    <constraint firstAttribute="height" constant="256" id="RfE-zf-yV1"/>
+                                    <constraint firstAttribute="width" constant="256" id="XnC-v5-N1n"/>
+                                    <constraint firstAttribute="height" constant="256" id="aiZ-u8-7Dg"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z2n-Pt-edA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mvG-ze-I9U"/>
-                            <constraint firstItem="z2n-Pt-edA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xXf-Pj-FOd"/>
+                            <constraint firstItem="DcH-4H-ndk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NEe-x4-K1I"/>
+                            <constraint firstItem="DcH-4H-ndk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="r5f-VC-GXa"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NS_LOGO_CS" width="256" height="256"/>
+        <image name="DY_LOGO_CS" width="256" height="256"/>
     </resources>
 </document>

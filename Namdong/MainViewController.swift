@@ -19,11 +19,12 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         webView.scrollView.bounces = false
         webView.backgroundColor = UIColor.white
-
+        let test = ApplicationData.shared.getServerUrl()
         // Do any additional setup after loading the view.
         self.loadWebViewMain()
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNotiUrl), name: NSNotification.Name(rawValue: "UrlNoti"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNotiUrl), name: NSNotification.Name(rawValue: "TokenChanged"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +37,6 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     /// Load webview main page
     func loadWebViewMain() {
-        
         let fcmToken = Messaging.messaging().fcmToken
         let userId = ApplicationData.shared.getUserLoginID()
         if ApplicationData.shared.isUseAutoLogin() && userId.characters.count > 0 {
@@ -49,10 +49,13 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             webView.loadRequest(request)
         }else{
             // 일반 로그인
+            targetUrl = ApplicationData.shared.getNormalLoginUrl()
             var request = URLRequest.init(url: URL(string: targetUrl)!)
-            let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
-            request.httpMethod = "POST"
-            request.httpBody = body.data(using: .utf8)
+            if fcmToken != nil {
+                let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
+                request.httpMethod = "POST"
+                request.httpBody = body.data(using: .utf8)
+            }
             webView.loadRequest(request)
         }
     }

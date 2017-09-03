@@ -27,6 +27,37 @@ class ApplicationData: NSObject {
         
     }
     
+    /// 서버 주소를 가져옴.
+    ///
+    /// - Returns: 서버 Url
+    func getServerUrl() -> String {
+//        http://msp.namsung.co.kr/
+//        https://sslm.namsung.co.kr/
+//        http://msp.pcsline.co.kr/
+//        https://sslm.pcsline.co.kr/
+
+        var url = kServerUrl   
+        let bundleID = Bundle.main.bundleIdentifier!
+        switch bundleID {
+        case "kr.co.namsung.cs":
+            url = "http://msp.namsung.co.kr/"
+            self.contentType = .nscs
+        case "kr.co.namsung.op":
+            url = "https://sslm.namsung.co.kr/"
+            self.contentType = .nsop
+        case "kr.co.pcsline.cs":
+            url = "http://msp.pcsline.co.kr/"
+            self.contentType = .dycs
+        case "kr.co.pcsline.op":
+            url = "https://sslm.pcsline.co.kr/"
+            self.contentType = .dyop
+        default:
+            break
+        }
+        
+        return url
+    }
+    
     /// 자동로그인 판단
     ///
     /// - Returns: 자동로그인 사용 여부를 반환
@@ -126,6 +157,32 @@ class ApplicationData: NSObject {
         return result
     }
     
+    func getNormalLoginUrl() -> String{
+        var subUrl = ""
+        var fileName = ""
+        
+        switch self.contentType {
+        case .nscs:
+            subUrl = "NS_MOBILE_CS/"
+            fileName = "viewMain.do"
+            
+        case .nsop:
+            subUrl = "NS_MOBILE_OP/"
+            fileName = "loginOP.do"
+            
+        case .dycs:
+            subUrl = "DY_MOBILE_CS/"
+            fileName = "viewMain.do"
+            break;
+            
+        case .dyop:
+            subUrl = "DY_MOBILE_OP/"
+            fileName = "loginOP.do"
+        }
+        
+        return self.getServerUrl() + subUrl + "login/" + fileName
+    }
+    
     func getAutoLoginUrl() -> String{
         var subUrl = ""
         var fileName = ""
@@ -149,7 +206,7 @@ class ApplicationData: NSObject {
             fileName = "actionAutoLoginOP.do"
         }
         
-        return kServerUrl + subUrl + "login/" + fileName
+        return self.getServerUrl() + subUrl + "login/" + fileName
     }
     
     func getChangedUrlForAutoLogin(currentUrl: String) -> String{
