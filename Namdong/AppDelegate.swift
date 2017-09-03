@@ -49,16 +49,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func showNotification(_ object: Dictionary<String, String>){
-        let info = Bundle.main.infoDictionary!
-        let appName = info[kCFBundleNameKey as String] as! String
-        let message = object["body"] as! String
-        let urlLink = object["link_url"]
-        RNNotificationView.show(withImage: nil, title: appName, message: message) { 
-            if let urlString = urlLink {
-                // move to url
-            }
+    func asdf(_ asdf: Dictionary<AnyHashable, String>){
+        
+    }
+    
+    func showNotification(_ object: Dictionary<AnyHashable, Any>){
+        guard
+            let aps     = object["aps"] as? NSDictionary,
+            let alert   = aps["alert"] as? NSDictionary,
+            let title   = alert["title"] as? String,
+            let message = alert["body"] as? String
+        else {
+            return;
+        }
+        let urlLink = object["gcm.notification.link_url"] as? String
         let iconImage = UIImage.init(named: "AppIcon60x60")
+        
+        RNNotificationView.show(withImage: iconImage, title: title, message: message) {
+            if urlLink != nil {
+                // move to url
+                ApplicationData.shared.reservedUrl = urlLink
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UrlNoti"), object: urlLink)
+            }
         }
     }
     
@@ -166,9 +178,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        
-        let object = userInfo[dataKey] as! Dictionary<String, String>
-        self.showNotification(object)
+        self.showNotification(userInfo)
         
         // Change this to your preferred presentation option
         completionHandler([])
@@ -178,9 +188,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
-        
-        let object = userInfo[apsKey] as! Dictionary<String, String>
-        self.showNotification(object)
+        self.showNotification(userInfo)
         
         completionHandler()
     }

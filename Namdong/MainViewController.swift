@@ -22,6 +22,16 @@ class MainViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         self.loadWebViewMain()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadNotiUrl), name: NSNotification.Name(rawValue: "UrlNoti"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let url = ApplicationData.shared.reservedUrl {
+            let request = URLRequest.init(url: URL(string: url)!)
+            webView.loadRequest(request)
+            ApplicationData.shared.reservedUrl = nil
+        }
     }
     
     /// Load webview main page
@@ -44,6 +54,14 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             request.httpMethod = "POST"
             request.httpBody = body.data(using: .utf8)
             webView.loadRequest(request)
+        }
+    }
+    
+    func loadNotiUrl(_ noti: Notification){
+        if let url = noti.object as? String {
+            let request = URLRequest.init(url: URL(string: url)!)
+            webView.loadRequest(request)
+            ApplicationData.shared.reservedUrl = nil
         }
     }
     

@@ -20,6 +20,7 @@ class ApplicationData: NSObject {
     var contentType = ContentMode.nscs  // defaultValue
     var cookieData  = Dictionary<String, String>()
     var fcmToken    = ""
+    var reservedUrl: String? = nil
     
     
     override init() {
