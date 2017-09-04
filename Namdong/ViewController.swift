@@ -12,9 +12,20 @@ public typealias CompletionHandler = (_ isOpenable: Bool) -> Void
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageLogo: UIImageView!
+    @IBOutlet weak var lbeSubTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let titleInfo = ApplicationData.shared.getLogoWithTitle()
+        imageLogo.image  = titleInfo.0
+        lbeSubTitle.text = titleInfo.1       
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3) {
+            self.performSegue(withIdentifier: "showWeb", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,10 +29,24 @@
                                     <constraint firstAttribute="height" constant="256" id="aiZ-u8-7Dg"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAL-Bw-Zo7">
+                                <rect key="frame" x="38" y="469" width="299" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="tgh-TN-7EQ"/>
+                                </constraints>
+                                <string key="text">Your Successful Business partner
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="dAL-Bw-Zo7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="22" id="A95-N4-iWw"/>
                             <constraint firstItem="DcH-4H-ndk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NEe-x4-K1I"/>
+                            <constraint firstItem="dAL-Bw-Zo7" firstAttribute="top" secondItem="DcH-4H-ndk" secondAttribute="bottom" constant="8" id="T4Y-Eo-5nh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dAL-Bw-Zo7" secondAttribute="trailing" constant="22" id="fSx-yi-sSU"/>
                             <constraint firstItem="DcH-4H-ndk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="r5f-VC-GXa"/>
                         </constraints>
                     </view>

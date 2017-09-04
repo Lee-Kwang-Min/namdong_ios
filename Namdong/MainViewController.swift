@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         webView.scrollView.bounces = false
         webView.backgroundColor = UIColor.white
-        let test = ApplicationData.shared.getServerUrl()
+        _ = ApplicationData.shared.getServerUrl()   // 등록용
         // Do any additional setup after loading the view.
         self.loadWebViewMain()
         

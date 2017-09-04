@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lvL-60-Vc2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2jP-Kc-lNS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,20 +10,20 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="bQ2-ge-Gek">
+        <scene sceneID="Nv2-JE-Xa1">
             <objects>
-                <navigationController navigationBarHidden="YES" id="lvL-60-Vc2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRb-1n-TvC">
+                <navigationController id="2jP-Kc-lNS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2HW-9B-duH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ie9-Ni-YLe" kind="relationship" relationship="rootViewController" id="D3y-54-ymz"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rp2-U1-zL1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JlY-DP-RX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k52-On-RfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-652" y="124"/>
+            <point key="canvasLocation" x="-687" y="124"/>
         </scene>
         <!--테스트-->
         <scene sceneID="tne-QT-ifu">
@@ -37,58 +37,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="남성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGt-LP-rWs">
-                                <rect key="frame" x="16" y="72" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKo-Hg-HTa">
+                                <rect key="frame" x="26" y="469" width="323" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="323" id="AgL-xo-wQP"/>
+                                    <constraint firstAttribute="height" constant="24" id="ZiO-w3-m2G"/>
+                                </constraints>
+                                <string key="text">Your Successful Business partner
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3u-S0-IGB">
-                                <rect key="frame" x="209" y="101" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="OPERATION"/>
-                                <connections>
-                                    <action selector="moveManageNamsung:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zj0-zd-lD0"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="동영" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfi-eu-PfM">
-                                <rect key="frame" x="16" y="139" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2Y-cF-LqW">
-                                <rect key="frame" x="16" y="101" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CUSTOMER"/>
-                                <connections>
-                                    <action selector="moveUserNamsung:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Tf-fb-XLK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iu-uZ-2vC">
-                                <rect key="frame" x="16" y="168" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CUSTOMER"/>
-                                <connections>
-                                    <action selector="moveUserDongyoung:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyh-gs-h8R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os7-3I-1TD">
-                                <rect key="frame" x="209" y="168" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="OPERATION"/>
-                                <connections>
-                                    <action selector="moveManagerDongyoung:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAt-1i-1nY"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DY_LOGO_CS" translatesAutoresizingMaskIntoConstraints="NO" id="sqi-Tv-Vwj">
+                                <rect key="frame" x="59" y="205" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="IrY-J9-Kla"/>
+                                    <constraint firstAttribute="height" constant="256" id="SDH-Kv-45e"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XKo-Hg-HTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5wf-cI-eFK"/>
+                            <constraint firstItem="sqi-Tv-Vwj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Gx-hv-wcP"/>
+                            <constraint firstItem="XKo-Hg-HTa" firstAttribute="top" secondItem="sqi-Tv-Vwj" secondAttribute="bottom" constant="8" id="FeQ-vS-D4T"/>
+                            <constraint firstItem="sqi-Tv-Vwj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ULJ-6G-fUO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="테스트" id="muQ-4I-eeV"/>
                     <connections>
-                        <segue destination="ie9-Ni-YLe" kind="show" identifier="showWeb" id="VFK-Ia-Jyv"/>
+                        <outlet property="imageLogo" destination="sqi-Tv-Vwj" id="cLR-xy-er7"/>
+                        <outlet property="lbeSubTitle" destination="XKo-Hg-HTa" id="7B1-S6-LNz"/>
+                        <segue destination="ie9-Ni-YLe" kind="presentation" identifier="showWeb" modalTransitionStyle="crossDissolve" id="VFK-Ia-Jyv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,7 +114,7 @@
             <point key="canvasLocation" x="924" y="123.68815592203899"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="D3y-54-ymz"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="DY_LOGO_CS" width="256" height="256"/>
+    </resources>
 </document>

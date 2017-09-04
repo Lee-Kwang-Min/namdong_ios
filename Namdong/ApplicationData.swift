@@ -27,6 +27,35 @@ class ApplicationData: NSObject {
         
     }
     
+    func getLogoWithTitle() -> (UIImage, String) {
+        var image = #imageLiteral(resourceName: "NS_LOGO_CS")
+        var title = "The Best Logistics Value Creator"
+        
+        let bundleID = Bundle.main.bundleIdentifier!
+        switch bundleID {
+        case "kr.co.namsung.cs":
+            image = #imageLiteral(resourceName: "NS_LOGO_CS")
+            title = "The Best Logistics Value Creator";
+            
+        case "kr.co.namsung.op":
+            image = #imageLiteral(resourceName: "NS_LOGO_OP")
+            title = "The Best Logistics Value Creator";
+            
+        case "kr.co.pcsline.cs":
+            image = #imageLiteral(resourceName: "DY_LOGO_CS")
+            title = "Your Successful Business partner";
+            
+        case "kr.co.pcsline.op":
+            image = #imageLiteral(resourceName: "DY_LOGO_OP")
+            title = "Your Successful Business partner";
+            
+        default:
+            break
+        }
+        
+        return (image, title)
+    }
+    
     /// 서버 주소를 가져옴.
     ///
     /// - Returns: 서버 Url
@@ -43,13 +72,13 @@ class ApplicationData: NSObject {
             url = "http://msp.namsung.co.kr/"
             self.contentType = .nscs
         case "kr.co.namsung.op":
-            url = "https://sslm.namsung.co.kr/"
+            url = "http://msp.namsung.co.kr/"
             self.contentType = .nsop
         case "kr.co.pcsline.cs":
             url = "http://msp.pcsline.co.kr/"
             self.contentType = .dycs
         case "kr.co.pcsline.op":
-            url = "https://sslm.pcsline.co.kr/"
+            url = "http://msp.pcsline.co.kr/"
             self.contentType = .dyop
         default:
             break
@@ -221,9 +250,6 @@ class ApplicationData: NSObject {
         case .nsop, .dyop:
             fileName = "actionAutoLoginOP.do"
             originFileName = "loginOP.do"
-            break;
-            
-        default:
             break;
         }
         
