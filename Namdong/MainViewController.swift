@@ -40,6 +40,14 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ModalFileViewer" {
+            let navi = segue.destination
+            let fileView = navi.childViewControllers.last as? FileViewController
+            fileView?.request = sender as? URLRequest
+        }
+    }
+    
     /// Load webview main page
     func loadWebViewMain() {
         let fcmToken = Messaging.messaging().fcmToken
@@ -163,6 +171,22 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         return true;
     }
     
+    /// Content Opener
+    ///
+    /// - Parameter request: webview url request
+    /// - Returns: is content url
+    func openUrlByFileViewer(request: URLRequest) -> Bool{
+        let isGoogle = request.url?.absoluteString.contains("drive.google.com")
+        let isBlCopy = request.url?.absoluteString.contains("prtCopyBl.do")
+        
+        let result = (isGoogle == true || isBlCopy == true)
+        if result {
+            // 새 창
+            self.performSegue(withIdentifier: "ModalFileViewer", sender: request)
+        }
+        return !result
+    }
+    
     /// Url Openner
     ///
     /// - Parameters:
@@ -242,7 +266,11 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        let result = callFunc(request.url?.absoluteString)
+        var result = callFunc(request.url?.absoluteString)
+        
+        if result == true{
+            result = self.openUrlByFileViewer(request: request)
+        }
         return result
     }
 
