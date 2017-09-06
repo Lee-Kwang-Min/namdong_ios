@@ -14,12 +14,12 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NamdongCS.xcscheme</key>
+		<key>NamsungCS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>NamdongOP.xcscheme</key>
+		<key>NamsungOP.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>5</integer>
