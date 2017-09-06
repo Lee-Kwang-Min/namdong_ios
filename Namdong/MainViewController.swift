@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var webView: UIWebView!
     var targetUrl = "http://google.com"
+    var introViewController: UIViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         webView.backgroundColor = UIColor.white
         _ = ApplicationData.shared.getServerUrl()   // 등록용
         // Do any additional setup after loading the view.
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        introViewController = storyboard.instantiateViewController(withIdentifier: "introView")
+        self.view.addSubview((introViewController?.view)!)
+        
         self.loadWebViewMain()
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadNotiUrl), name: NSNotification.Name(rawValue: "UrlNoti"), object: nil)
@@ -212,6 +217,11 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     // MARK: - UIWebView Delegate
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        if introViewController != nil {
+            introViewController?.view.removeFromSuperview()
+            introViewController = nil
+        }
+        
         guard let request = webView.request else { return }
         
         let cachedUrlResponse = URLCache.shared.cachedResponse(for: request)

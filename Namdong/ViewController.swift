@@ -23,8 +23,11 @@ class ViewController: UIViewController {
         imageLogo.image  = titleInfo.0
         lbeSubTitle.text = titleInfo.1       
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3) {
-            self.performSegue(withIdentifier: "showWeb", sender: nil)
+        if ApplicationData.shared.isFirstInit == false {
+            ApplicationData.shared.isFirstInit = true;
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3) {
+                self.performSegue(withIdentifier: "showWeb", sender: nil)
+            }
         }
     }
 
