@@ -182,8 +182,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     func openUrlByFileViewer(request: URLRequest) -> Bool{
         let isGoogle = request.url?.absoluteString.contains("drive.google.com")
         let isBlCopy = request.url?.absoluteString.contains("prtCopyBl.do")
+        let isBooked = request.url?.absoluteString.contains("prtBookingSheet.do")
         
-        let result = (isGoogle == true || isBlCopy == true)
+        let result = (isGoogle == true || isBlCopy == true || isBooked == true)
         if result {
             // 새 창
             self.performSegue(withIdentifier: "ModalFileViewer", sender: request)
