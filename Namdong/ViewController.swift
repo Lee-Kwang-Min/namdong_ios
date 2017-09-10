@@ -25,7 +25,13 @@ class ViewController: UIViewController {
         
         if ApplicationData.shared.isFirstInit == false {
             ApplicationData.shared.isFirstInit = true;
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+3) {
+            var time = DispatchTime.now() + 3
+            let fcmToken = UserDefaults.standard.object(forKey: "fcmToken")
+            
+            if fcmToken != nil {
+                time = DispatchTime.now() + 1
+            }
+            DispatchQueue.main.asyncAfter(deadline: time) {
                 self.performSegue(withIdentifier: "showWeb", sender: nil)
             }
         }

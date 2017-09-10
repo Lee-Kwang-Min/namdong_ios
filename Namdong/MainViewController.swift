@@ -51,6 +51,10 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     /// Load webview main page
     func loadWebViewMain() {
         let fcmToken = Messaging.messaging().fcmToken
+        if fcmToken != nil {
+            UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
+            UserDefaults.standard.synchronize()
+        }
         let userId = ApplicationData.shared.getUserLoginID()
         if ApplicationData.shared.isUseAutoLogin() && userId.characters.count > 0 {
             // 자동 로그인

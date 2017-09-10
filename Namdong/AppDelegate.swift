@@ -201,6 +201,8 @@ extension AppDelegate : MessagingDelegate {
     func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
 
+        UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
+        UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TokenChanged"), object: nil)
     }
     // [END refresh_token]
