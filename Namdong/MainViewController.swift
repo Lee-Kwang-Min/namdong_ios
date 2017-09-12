@@ -34,7 +34,8 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         if let url = ApplicationData.shared.reservedUrl {
-            let request = URLRequest.init(url: URL(string: url)!)
+            let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            let request = URLRequest.init(url: URL(string: encodedString)!)
             webView.loadRequest(request)
             ApplicationData.shared.reservedUrl = nil
         }
@@ -79,7 +80,8 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     
     func loadNotiUrl(_ noti: Notification){
         if let url = noti.object as? String {
-            let request = URLRequest.init(url: URL(string: url)!)
+            let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+            let request = URLRequest.init(url: URL(string: encodedString)!)
             webView.loadRequest(request)
             ApplicationData.shared.reservedUrl = nil
         }
