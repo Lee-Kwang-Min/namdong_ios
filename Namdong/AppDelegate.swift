@@ -49,10 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func asdf(_ asdf: Dictionary<AnyHashable, String>){
-        
-    }
-    
     func showNotification(_ object: Dictionary<AnyHashable, Any>){
         guard
             let aps     = object["aps"] as? NSDictionary,
