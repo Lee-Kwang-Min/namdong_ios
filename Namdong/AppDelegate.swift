@@ -79,12 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
         // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+        if UIApplication.shared.applicationState == .inactive {
+            let urlLink = userInfo["gcm.notification.link_url"] as? String
+            ApplicationData.shared.reservedUrl = urlLink
+        }else{
+            self.showNotification(userInfo)
         }
-        
-        // Print full message.
-        print(userInfo)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
@@ -96,13 +96,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+        // Under iOS 10: Using
+        if UIApplication.shared.applicationState == .inactive {
+            let urlLink = userInfo["gcm.notification.link_url"] as? String
+            ApplicationData.shared.reservedUrl = urlLink
+        }else{
+            self.showNotification(userInfo)
         }
-        
-        // Print full message.
-        print(userInfo)
         
         completionHandler(UIBackgroundFetchResult.newData)
     }
@@ -184,7 +184,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
-        self.showNotification(userInfo)
+        let urlLink = userInfo["gcm.notification.link_url"] as? String
+        ApplicationData.shared.reservedUrl = urlLink
         
         completionHandler()
     }
