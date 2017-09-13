@@ -28,6 +28,23 @@ class ApplicationData: NSObject {
         
     }
     
+    func getIntroImage() -> UIImage {
+        var image = #imageLiteral(resourceName: "NS_Intro")
+        
+        let bundleID = Bundle.main.bundleIdentifier!
+        switch bundleID {
+        case "kr.co.namsung.cs", "kr.co.namsung.op":
+            image = #imageLiteral(resourceName: "NS_Intro")
+            
+        case "kr.co.pcsline.cs", "kr.co.pcsline.op":
+            image = #imageLiteral(resourceName: "DY_Intro")
+        default:
+            break
+        }
+        
+        return image
+    }
+    
     func getLogoWithTitle() -> (UIImage, String) {
         var image = #imageLiteral(resourceName: "NS_LOGO_CS")
         var title = "The Best Logistics Value Creator"
@@ -108,6 +125,7 @@ class ApplicationData: NSObject {
     
     func loadCookieData(){
         for cookie in HTTPCookieStorage.shared.cookies! {
+            print("Cookie: ", cookie.name)
             if cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType) {
                 print("\(cookie.name) \n\n \(cookie.value) \n\n \(cookie.version) \n\n \(cookie)")
                 cookieData.updateValue(cookie.value, forKey: cookie.name)

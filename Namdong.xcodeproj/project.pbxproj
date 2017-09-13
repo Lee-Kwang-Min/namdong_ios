@@ -59,6 +59,11 @@
 		835375BE1F5663100025FBE1 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
 		835375C11F566B240025FBE1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
 		835375C31F566B2B0025FBE1 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
+		835B30901F677A1C004198F9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83232D231F2F6B8D00A4803D /* Info.plist */; };
+		83CE19AD1F6946E90004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */; };
+		83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */; };
+		83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */; };
+		83CE19B11F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +93,8 @@
 		835375BD1F5663100025FBE1 /* notFound.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = notFound.html; sourceTree = "<group>"; };
 		835375C01F566B240025FBE1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		835375C21F566B2B0025FBE1 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Namdong.release.xcconfig"; path = "Pods/Target Support Files/Pods-Namdong/Pods-Namdong.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +237,8 @@
 				83232D191F2F6B8D00A4803D /* ViewController.swift */,
 				83232D1B1F2F6B8D00A4803D /* Main.storyboard */,
 				83232D1E1F2F6B8D00A4803D /* Assets.xcassets */,
+				83CE19A51F6946E90004CB94 /* DY */,
+				83CE19A81F6946E90004CB94 /* NS */,
 				83232D201F2F6B8D00A4803D /* LaunchScreen.storyboard */,
 				83232D231F2F6B8D00A4803D /* Info.plist */,
 				83232D471F2F7F0500A4803D /* MainViewController.swift */,
@@ -255,6 +264,24 @@
 				835375BD1F5663100025FBE1 /* notFound.html */,
 			);
 			path = html;
+			sourceTree = "<group>";
+		};
+		83CE19A51F6946E90004CB94 /* DY */ = {
+			isa = PBXGroup;
+			children = (
+				83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */,
+			);
+			name = DY;
+			path = Base.lproj/DY;
+			sourceTree = "<group>";
+		};
+		83CE19A81F6946E90004CB94 /* NS */ = {
+			isa = PBXGroup;
+			children = (
+				83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */,
+			);
+			name = NS;
+			path = Base.lproj/NS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +430,7 @@
 				832080C81F5BF2E10083B994 /* notFound.html in Resources */,
 				832080DA1F5BFB7F0083B994 /* GoogleService-Info.plist in Resources */,
 				832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */,
+				83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C21F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */,
 			);
@@ -415,6 +443,7 @@
 				832080E91F5BFD0E0083B994 /* notFound.html in Resources */,
 				832080EA1F5BFD0E0083B994 /* Assets.xcassets in Resources */,
 				832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */,
+				83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C31F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				832081121F5BFE3E0083B994 /* GoogleService-Info.plist in Resources */,
 			);
@@ -427,6 +456,7 @@
 				832081011F5BFD530083B994 /* notFound.html in Resources */,
 				832081041F5BFD530083B994 /* Assets.xcassets in Resources */,
 				832081051F5BFD530083B994 /* Main.storyboard in Resources */,
+				83CE19B11F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C41F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				8320810F1F5BFE060083B994 /* GoogleService-Info.plist in Resources */,
 			);
@@ -436,8 +466,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CE19AD1F6946E90004CB94 /* LaunchScreen.storyboard in Resources */,
 				835375BE1F5663100025FBE1 /* notFound.html in Resources */,
 				83232D1F1F2F6B8D00A4803D /* Assets.xcassets in Resources */,
+				835B30901F677A1C004198F9 /* Info.plist in Resources */,
 				832080DC1F5BFB890083B994 /* GoogleService-Info.plist in Resources */,
 				834511C11F5D99E400BB63B4 /* LaunchScreen.storyboard in Resources */,
 				83232D1D1F2F6B8D00A4803D /* Main.storyboard in Resources */,

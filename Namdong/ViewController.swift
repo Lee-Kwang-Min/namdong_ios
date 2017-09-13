@@ -11,17 +11,15 @@ import UIKit
 public typealias CompletionHandler = (_ isOpenable: Bool) -> Void
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var imageLogo: UIImageView!
-    @IBOutlet weak var lbeSubTitle: UILabel!
+    
+    @IBOutlet weak var imageIntro: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let titleInfo = ApplicationData.shared.getLogoWithTitle()
-        imageLogo.image  = titleInfo.0
-        lbeSubTitle.text = titleInfo.1       
+        let introImage = ApplicationData.shared.getIntroImage()
+        imageIntro.image = introImage
         
         if ApplicationData.shared.isFirstInit == false {
             ApplicationData.shared.isFirstInit = true;
