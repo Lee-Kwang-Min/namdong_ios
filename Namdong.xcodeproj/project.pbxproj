@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6E3EB0D52C35612DE14C9E60 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
+		65E0384671A9800938B026FC /* Pods_NamdongCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED2FBB6676F1377A9D59B4B /* Pods_NamdongCS.framework */; };
 		830DE67E1F56B61500EFBF2F /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
 		832080BE1F5BF2E10083B994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
 		832080BF1F5BF2E10083B994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
@@ -15,7 +15,6 @@
 		832080C11F5BF2E10083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
 		832080C31F5BF2E10083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
 		832080C41F5BF2E10083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
-		832080C51F5BF2E10083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
 		832080C81F5BF2E10083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
 		832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
 		832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 		832080E31F5BFD0E0083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
 		832080E51F5BFD0E0083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
 		832080E61F5BFD0E0083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
-		832080E71F5BFD0E0083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
 		832080E91F5BFD0E0083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
 		832080EA1F5BFD0E0083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
 		832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
@@ -37,7 +35,6 @@
 		832080FB1F5BFD530083B994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D171F2F6B8D00A4803D /* AppDelegate.swift */; };
 		832080FD1F5BFD530083B994 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
 		832080FE1F5BFD530083B994 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
-		832080FF1F5BFD530083B994 /* Pods_Namdong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112A10C539DCE9205AED451D /* Pods_Namdong.framework */; };
 		832081011F5BFD530083B994 /* notFound.html in Resources */ = {isa = PBXBuildFile; fileRef = 835375BD1F5663100025FBE1 /* notFound.html */; };
 		832081041F5BFD530083B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1E1F2F6B8D00A4803D /* Assets.xcassets */; };
 		832081051F5BFD530083B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83232D1B1F2F6B8D00A4803D /* Main.storyboard */; };
@@ -64,11 +61,19 @@
 		83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */; };
 		83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */; };
 		83CE19B11F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */; };
+		9CE6FA7EBD339C4A89413E2B /* Pods_DongyoungCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D6CEB7A8896684F5A50DE1 /* Pods_DongyoungCS.framework */; };
+		B8F77F372C447DCFCD2618AB /* Pods_DongyoungOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145933DFFA27A0F832C3E2BE /* Pods_DongyoungOP.framework */; };
+		F06A6193CDA35AB01427914E /* Pods_NamdongOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F453AF8ADD8A11BD2FBCD3 /* Pods_NamdongOP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Namdong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Namdong/Pods-Namdong.debug.xcconfig"; sourceTree = "<group>"; };
-		112A10C539DCE9205AED451D /* Pods_Namdong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Namdong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		145933DFFA27A0F832C3E2BE /* Pods_DongyoungOP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DongyoungOP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36CC8EB2644C4B1C691D93C8 /* Pods-DongyoungCS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongyoungCS.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongyoungCS/Pods-DongyoungCS.release.xcconfig"; sourceTree = "<group>"; };
+		37D6CEB7A8896684F5A50DE1 /* Pods_DongyoungCS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DongyoungCS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED2FBB6676F1377A9D59B4B /* Pods_NamdongCS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamdongCS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4685C001E441DB2E1E06938A /* Pods-DongyoungCS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongyoungCS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongyoungCS/Pods-DongyoungCS.debug.xcconfig"; sourceTree = "<group>"; };
+		47F453AF8ADD8A11BD2FBCD3 /* Pods_NamdongOP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NamdongOP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AED8AE03A64113A6412183C /* Pods-NamdongCS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongCS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS.release.xcconfig"; sourceTree = "<group>"; };
 		830DE67A1F56842E00EFBF2F /* Namdong.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Namdong.entitlements; sourceTree = "<group>"; };
 		830DE67D1F56B61500EFBF2F /* ApplicationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
 		832080D11F5BF2E10083B994 /* DongyoungCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongyoungCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +100,11 @@
 		835375C21F566B2B0025FBE1 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Namdong.release.xcconfig"; path = "Pods/Target Support Files/Pods-Namdong/Pods-Namdong.release.xcconfig"; sourceTree = "<group>"; };
+		91F3634C662DD52CBC7EE131 /* Pods-NamdongOP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongOP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP.debug.xcconfig"; sourceTree = "<group>"; };
+		A60091CE9A0DBA707B6B035E /* Pods-DongyoungOP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongyoungOP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DongyoungOP/Pods-DongyoungOP.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE7419E88980E5B9B01F0B1 /* Pods-NamdongOP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongOP.release.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP.release.xcconfig"; sourceTree = "<group>"; };
+		E2BE9E1E0F570E387011E4DE /* Pods-DongyoungOP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DongyoungOP.release.xcconfig"; path = "Pods/Target Support Files/Pods-DongyoungOP/Pods-DongyoungOP.release.xcconfig"; sourceTree = "<group>"; };
+		EFD75A05ABF1D415CE8EDA56 /* Pods-NamdongCS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongCS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +114,7 @@
 			files = (
 				832080C31F5BF2E10083B994 /* PushKit.framework in Frameworks */,
 				832080C41F5BF2E10083B994 /* UserNotifications.framework in Frameworks */,
-				832080C51F5BF2E10083B994 /* Pods_Namdong.framework in Frameworks */,
+				9CE6FA7EBD339C4A89413E2B /* Pods_DongyoungCS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +124,7 @@
 			files = (
 				832080E51F5BFD0E0083B994 /* PushKit.framework in Frameworks */,
 				832080E61F5BFD0E0083B994 /* UserNotifications.framework in Frameworks */,
-				832080E71F5BFD0E0083B994 /* Pods_Namdong.framework in Frameworks */,
+				F06A6193CDA35AB01427914E /* Pods_NamdongOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +134,7 @@
 			files = (
 				832080FD1F5BFD530083B994 /* PushKit.framework in Frameworks */,
 				832080FE1F5BFD530083B994 /* UserNotifications.framework in Frameworks */,
-				832080FF1F5BFD530083B994 /* Pods_Namdong.framework in Frameworks */,
+				B8F77F372C447DCFCD2618AB /* Pods_DongyoungOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +144,7 @@
 			files = (
 				835375C31F566B2B0025FBE1 /* PushKit.framework in Frameworks */,
 				835375C11F566B240025FBE1 /* UserNotifications.framework in Frameworks */,
-				6E3EB0D52C35612DE14C9E60 /* Pods_Namdong.framework in Frameworks */,
+				65E0384671A9800938B026FC /* Pods_NamdongCS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +156,10 @@
 			children = (
 				835375C21F566B2B0025FBE1 /* PushKit.framework */,
 				835375C01F566B240025FBE1 /* UserNotifications.framework */,
-				112A10C539DCE9205AED451D /* Pods_Namdong.framework */,
+				145933DFFA27A0F832C3E2BE /* Pods_DongyoungOP.framework */,
+				3ED2FBB6676F1377A9D59B4B /* Pods_NamdongCS.framework */,
+				37D6CEB7A8896684F5A50DE1 /* Pods_DongyoungCS.framework */,
+				47F453AF8ADD8A11BD2FBCD3 /* Pods_NamdongOP.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,8 +167,14 @@
 		4397E713D2040B9B2C9A5CE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */,
-				AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */,
+				4685C001E441DB2E1E06938A /* Pods-DongyoungCS.debug.xcconfig */,
+				36CC8EB2644C4B1C691D93C8 /* Pods-DongyoungCS.release.xcconfig */,
+				A60091CE9A0DBA707B6B035E /* Pods-DongyoungOP.debug.xcconfig */,
+				E2BE9E1E0F570E387011E4DE /* Pods-DongyoungOP.release.xcconfig */,
+				EFD75A05ABF1D415CE8EDA56 /* Pods-NamdongCS.debug.xcconfig */,
+				5AED8AE03A64113A6412183C /* Pods-NamdongCS.release.xcconfig */,
+				91F3634C662DD52CBC7EE131 /* Pods-NamdongOP.debug.xcconfig */,
+				ABE7419E88980E5B9B01F0B1 /* Pods-NamdongOP.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -485,18 +503,24 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNNotificationView/RNNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73E91F85C5743C366AB6BC89 /* [CP] Check Pods Manifest.lock */ = {
@@ -510,11 +534,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NamdongCS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080BC1F5BF2E10083B994 /* [CP] Check Pods Manifest.lock */ = {
@@ -528,11 +552,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DongyoungCS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080CC1F5BF2E10083B994 /* [CP] Embed Pods Frameworks */ = {
@@ -541,18 +565,24 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungCS/Pods-DongyoungCS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNNotificationView/RNNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungCS/Pods-DongyoungCS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080CD1F5BF2E10083B994 /* [CP] Copy Pods Resources */ = {
@@ -567,7 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungCS/Pods-DongyoungCS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080DE1F5BFD0E0083B994 /* [CP] Check Pods Manifest.lock */ = {
@@ -581,11 +611,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NamdongOP-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080EE1F5BFD0E0083B994 /* [CP] Embed Pods Frameworks */ = {
@@ -594,18 +624,24 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNNotificationView/RNNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080EF1F5BFD0E0083B994 /* [CP] Copy Pods Resources */ = {
@@ -620,7 +656,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832080F61F5BFD530083B994 /* [CP] Check Pods Manifest.lock */ = {
@@ -634,11 +670,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Namdong-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DongyoungOP-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832081061F5BFD530083B994 /* [CP] Embed Pods Frameworks */ = {
@@ -647,18 +683,24 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungOP/Pods-DongyoungOP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNNotificationView/RNNotificationView.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNNotificationView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungOP/Pods-DongyoungOP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		832081071F5BFD530083B994 /* [CP] Copy Pods Resources */ = {
@@ -673,7 +715,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DongyoungOP/Pods-DongyoungOP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C0750D837ECF189507167A61 /* [CP] Copy Pods Resources */ = {
@@ -688,7 +730,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Namdong/Pods-Namdong-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -766,7 +808,7 @@
 /* Begin XCBuildConfiguration section */
 		832080CF1F5BF2E10083B994 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			baseConfigurationReference = 4685C001E441DB2E1E06938A /* Pods-DongyoungCS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = dycs;
@@ -783,7 +825,7 @@
 		};
 		832080D01F5BF2E10083B994 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			baseConfigurationReference = 36CC8EB2644C4B1C691D93C8 /* Pods-DongyoungCS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = dycs;
@@ -800,7 +842,7 @@
 		};
 		832080F11F5BFD0E0083B994 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			baseConfigurationReference = 91F3634C662DD52CBC7EE131 /* Pods-NamdongOP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = nsop;
@@ -817,7 +859,7 @@
 		};
 		832080F21F5BFD0E0083B994 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			baseConfigurationReference = ABE7419E88980E5B9B01F0B1 /* Pods-NamdongOP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = nsop;
@@ -834,7 +876,7 @@
 		};
 		832081091F5BFD530083B994 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			baseConfigurationReference = A60091CE9A0DBA707B6B035E /* Pods-DongyoungOP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = dyop;
@@ -851,7 +893,7 @@
 		};
 		8320810A1F5BFD530083B994 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			baseConfigurationReference = E2BE9E1E0F570E387011E4DE /* Pods-DongyoungOP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon.${BUNDLE_ID_SUFFIX}";
 				BUNDLE_ID_SUFFIX = dyop;
@@ -962,7 +1004,7 @@
 		};
 		83232D271F2F6B8D00A4803D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 062E558F82FF8FA316695AF4 /* Pods-Namdong.debug.xcconfig */;
+			baseConfigurationReference = EFD75A05ABF1D415CE8EDA56 /* Pods-NamdongCS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
@@ -979,7 +1021,7 @@
 		};
 		83232D281F2F6B8D00A4803D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA7D608518600B0CF9D4C9F4 /* Pods-Namdong.release.xcconfig */;
+			baseConfigurationReference = 5AED8AE03A64113A6412183C /* Pods-NamdongCS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
