@@ -96,7 +96,7 @@ class ApplicationData: NSObject {
             url = "http://msp.pcsline.co.kr/"
             self.contentType = .dycs
         case "kr.co.pcsline.op":
-            url = "http://msp.pcsline.co.kr/"
+            url = "https://sslm.pcsline.co.kr/"
             self.contentType = .dyop
         default:
             break
