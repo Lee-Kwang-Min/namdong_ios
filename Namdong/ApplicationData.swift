@@ -105,6 +105,23 @@ class ApplicationData: NSObject {
         return url
     }
     
+    func getSecureServerUrl() -> String {
+        
+        var url = kServerUrl
+        let bundleID = Bundle.main.bundleIdentifier!
+        switch bundleID {
+        case "kr.co.namsung.cs", "kr.co.namsung.op":
+            url = "http://msp.namsung.co.kr/"
+        
+        case "kr.co.pcsline.cs", "kr.co.pcsline.op":
+            url = "https://sslm.pcsline.co.kr/"
+        default:
+            break
+        }
+        
+        return url
+    }
+    
     /// 자동로그인 판단
     ///
     /// - Returns: 자동로그인 사용 여부를 반환
@@ -178,7 +195,7 @@ class ApplicationData: NSObject {
             result = "eMobile_nsopeMobile_auto"
             
         case .dycs:
-            result = "eMobile_dycueMobile_auto"
+            result = "eMobile_dycseMobile_auto"
             
         case .dyop:
             result = "eMobile_dyopeMobile_auto"
@@ -197,7 +214,7 @@ class ApplicationData: NSObject {
             result = "eMobile_nsopeMobile_usrlogin"
             
         case .dycs:
-            result = "eMobile_dycueMobile_usrlogin"
+            result = "eMobile_dycseMobile_usrlogin"
             
         case .dyop:
             result = "eMobile_dyopeMobile_usrlogin"
@@ -246,7 +263,7 @@ class ApplicationData: NSObject {
             
         case .dycs:
             subUrl = "DY_MOBILE_CS/"
-            fileName = "actionAutoLoginCS.do "
+            fileName = "actionAutoLoginCS.do"
             break;
             
         case .dyop:
@@ -254,7 +271,7 @@ class ApplicationData: NSObject {
             fileName = "actionAutoLoginOP.do"
         }
         
-        return self.getServerUrl() + subUrl + "login/" + fileName
+        return self.getSecureServerUrl() + subUrl + "login/" + fileName
     }
     
     func getChangedUrlForAutoLogin(currentUrl: String) -> String{
