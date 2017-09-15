@@ -279,7 +279,7 @@ class ApplicationData: NSObject {
         var originFileName = "";
         switch (self.contentType){
         case .nscs, .dycs:
-            fileName = "actionAutoLoginCS.do "
+            fileName = "actionAutoLoginCS.do"
             originFileName = "loginCS.do"
             break;
             
