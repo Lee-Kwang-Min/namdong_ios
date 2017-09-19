@@ -90,7 +90,7 @@ class ApplicationData: NSObject {
             url = "http://msp.namsung.co.kr/"
             self.contentType = .nscs
         case "kr.co.namsung.op":
-            url = "http://msp.namsung.co.kr/"
+            url = "https://sslm.namsung.co.kr/"
             self.contentType = .nsop
         case "kr.co.pcsline.cs":
             url = "http://msp.pcsline.co.kr/"
@@ -111,7 +111,7 @@ class ApplicationData: NSObject {
         let bundleID = Bundle.main.bundleIdentifier!
         switch bundleID {
         case "kr.co.namsung.cs", "kr.co.namsung.op":
-            url = "http://msp.namsung.co.kr/"
+            url = "https://sslm.namsung.co.kr/"
         
         case "kr.co.pcsline.cs", "kr.co.pcsline.op":
             url = "https://sslm.pcsline.co.kr/"
