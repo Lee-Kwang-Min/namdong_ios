@@ -194,6 +194,47 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         return !result
     }
     
+    /// Content Downloader
+    ///
+    /// - Parameter request: webview url request
+    /// - Returns: is download
+    func downloadFrom(request: URLRequest) -> Bool{
+        let result = request.url?.absoluteString.contains("downloadFile.json")
+        if result! {
+            let session = URLSession.shared
+            Toast.init(text: "Downloading").show()
+            let task = session.dataTask(with: request) {
+                (data, response, error) -> Void in
+                if let httpResponse = response as? HTTPURLResponse {
+                    let statusCode = httpResponse.statusCode
+                    if (statusCode == 200){
+                        let fileName = httpResponse.suggestedFilename
+                        // get document path
+                        do {
+                            let fManager = FileManager.default
+                            let docPath = try fManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                            let filePath = docPath.appendingPathComponent(fileName!)
+                            if (fManager.fileExists(atPath: filePath.path)){
+                                try fManager.removeItem(at: filePath)
+                            }
+                            try data?.write(to: filePath)
+                        }catch{
+                            // file save error
+                            Toast.init(text: "Unknown error occur. try again.").show()
+                        }
+                        
+                        Toast.init(text: "Download complete").show()
+                    }else{
+                        Toast.init(text: "Unknown error occur. try again.").show()
+                    }
+                }
+            }
+            task.resume()
+        }
+        
+        return !result!
+    }
+    
     /// Url Openner
     ///
     /// - Parameters:
@@ -278,6 +319,10 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         if result == true{
             result = self.openUrlByFileViewer(request: request)
         }
+        if result == true{
+            result = self.downloadFrom(request: request)
+        }
+        
         return result
     }
 
