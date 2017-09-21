@@ -79,7 +79,7 @@
                                 </connections>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ppS-Wv-pH0" secondAttribute="trailing" id="Crj-vy-cM3"/>
                             <constraint firstItem="ppS-Wv-pH0" firstAttribute="top" secondItem="IOg-dV-Lm2" secondAttribute="bottom" id="S7U-Jb-RrQ"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0ON-on-x7i" firstAttribute="top" secondItem="J0n-iS-DUW" secondAttribute="bottom" id="1so-kR-OdI"/>
                             <constraint firstItem="J0n-iS-DUW" firstAttribute="top" secondItem="NVG-aL-3KH" secondAttribute="bottom" id="EhK-eC-27i"/>
