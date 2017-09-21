@@ -224,7 +224,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                             try data?.write(to: filePath)
                             
                             // open
-                            self.performSegue(withIdentifier: "ModalFileViewer", sender: filePath)
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "ModalFileViewer", sender: filePath)
+                            }
                         }catch{
                             // file save error
                             Toast.init(text: "Unknown error occur. try again.").show()
