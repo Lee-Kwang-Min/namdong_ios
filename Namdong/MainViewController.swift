@@ -45,7 +45,11 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         if segue.identifier == "ModalFileViewer" {
             let navi = segue.destination
             let fileView = navi.childViewControllers.last as? FileViewController
-            fileView?.request = sender as? URLRequest
+            if sender is URLRequest {
+                fileView?.request = sender as? URLRequest
+            }else if sender is URL {
+                fileView?.localPath = sender as? URL
+            }
         }
     }
     
@@ -218,6 +222,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                                 try fManager.removeItem(at: filePath)
                             }
                             try data?.write(to: filePath)
+                            
+                            // open
+                            self.performSegue(withIdentifier: "ModalFileViewer", sender: filePath)
                         }catch{
                             // file save error
                             Toast.init(text: "Unknown error occur. try again.").show()

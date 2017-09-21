@@ -12,11 +12,15 @@ class FileViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     var request: URLRequest? = nil
+    var localPath: URL? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if self.request == nil {
+            self.request = URLRequest.init(url: self.localPath!)
+        }
         webView.loadRequest(self.request!)
         webView.scrollView.bounces = false
     }
