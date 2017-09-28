@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         if ApplicationData.shared.isFirstInit == false {
             ApplicationData.shared.isFirstInit = true;
-            var time = DispatchTime.now() + 3
+            var time = DispatchTime.now() + 5
             let fcmToken = UserDefaults.standard.object(forKey: "fcmToken")
             
             if fcmToken != nil {
