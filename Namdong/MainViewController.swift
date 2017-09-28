@@ -66,6 +66,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             let requestUrl = ApplicationData.shared.getAutoLoginUrl()
             var request = URLRequest.init(url: URL(string: requestUrl)!)
             request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.httpBody = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
             
             webView.loadRequest(request)
@@ -76,6 +77,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             if fcmToken != nil {
                 let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
                 request.httpMethod = "POST"
+                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.httpBody = body.data(using: .utf8)
             }
             webView.loadRequest(request)
