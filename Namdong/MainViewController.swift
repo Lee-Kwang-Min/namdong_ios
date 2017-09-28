@@ -191,8 +191,12 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         let isGoogle = request.url?.absoluteString.contains("drive.google.com")
         let isBlCopy = request.url?.absoluteString.contains("prtCopyBl.do")
         let isBooked = request.url?.absoluteString.contains("prtBookingSheet.do")
+        let isInvoic = request.url?.absoluteString.contains("prtInvoice.do")
+        let isExFree = request.url?.absoluteString.contains("prtExFreetime.do")
+        let isArrive = request.url?.absoluteString.contains("prtArrivalNotice.do")
         
-        let result = (isGoogle == true || isBlCopy == true || isBooked == true)
+        
+        let result = (isGoogle == true || isBlCopy == true || isBooked == true || isInvoic == true || isExFree == true || isArrive == true)
         if result {
             // 새 창
             self.performSegue(withIdentifier: "ModalFileViewer", sender: request)
