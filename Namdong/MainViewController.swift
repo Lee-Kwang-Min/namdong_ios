@@ -11,9 +11,8 @@ import Toaster
 import Firebase
 import WebKit
 
-class MainViewController: UIViewController, UIWebViewDelegate, WKUIDelegate, WKNavigationDelegate {
+class MainViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
-    @IBOutlet weak var oldWebView: UIWebView!
     var webView: WKWebView? = nil
     var targetUrl = "http://google.com"
     var introViewController: UIViewController? = nil
@@ -22,7 +21,7 @@ class MainViewController: UIViewController, UIWebViewDelegate, WKUIDelegate, WKN
         super.viewDidLoad()
         
         // Set WKWebView
-        webView = WKWebView.init(frame: oldWebView.frame)
+        webView = WKWebView.init(frame: self.view.frame)
         webView?.uiDelegate = self
         webView?.navigationDelegate = self
         webView?.scrollView.bounces = false
@@ -316,55 +315,6 @@ class MainViewController: UIViewController, UIWebViewDelegate, WKUIDelegate, WKN
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - UIWebView Delegate
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        if introViewController != nil {
-            introViewController?.view.removeFromSuperview()
-            introViewController = nil
-        }
-        
-        guard let request = webView.request else { return }
-        
-        let cachedUrlResponse = URLCache.shared.cachedResponse(for: request)
-        let httpUrlResponse = cachedUrlResponse?.response as? HTTPURLResponse
-        if let statusCode = httpUrlResponse?.statusCode {
-            if statusCode == 404 {
-                // Handling 404 response
-                do{
-                    let htmlPath = Bundle.main.path(forResource: "notFound", ofType: "html");
-                    let htmlString = try String.init(contentsOfFile: htmlPath!, encoding: String.Encoding.utf8)
-                    
-                    webView.loadHTMLString(htmlString, baseURL: nil)
-                }catch{
-                    NSLog("HTML File load error")
-                }
-            }
-        }
-    }
-    
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        var result = callFunc(request.url?.absoluteString)
-        
-        if result == true{
-            result = self.openUrlByFileViewer(request: request)
-        }
-        if result == true{
-            result = self.downloadFrom(request: request)
-        }
-        
-        return result
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: - WKWebView UIDelegate
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
         let appName = Bundle.main.infoDictionary?["CFBundleName"] as! String?
