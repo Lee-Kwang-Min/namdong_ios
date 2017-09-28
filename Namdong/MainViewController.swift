@@ -9,17 +9,31 @@
 import UIKit
 import Toaster
 import Firebase
+import WebKit
 
-class MainViewController: UIViewController, UIWebViewDelegate {
+class MainViewController: UIViewController, UIWebViewDelegate, WKUIDelegate, WKNavigationDelegate {
     
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var oldWebView: UIWebView!
+    var webView: WKWebView? = nil
     var targetUrl = "http://google.com"
     var introViewController: UIViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.scrollView.bounces = false
-        webView.backgroundColor = UIColor.white
+        
+        // Set WKWebView
+        webView = WKWebView.init(frame: oldWebView.frame)
+        webView?.uiDelegate = self
+        webView?.navigationDelegate = self
+        webView?.scrollView.bounces = false
+        webView?.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(webView!);
+
+        // Add Constraint
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[webView]-0-|", options: [], metrics: nil, views: ["webView":webView!]))
+        self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[top][webView][bottom]", options: [], metrics: nil, views: ["webView":webView!, "top":self.topLayoutGuide, "bottom":self.bottomLayoutGuide]))
+        self.view.layoutIfNeeded()
+        
         _ = ApplicationData.shared.getServerUrl()   // 등록용
         // Do any additional setup after loading the view.
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -36,7 +50,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         if let url = ApplicationData.shared.reservedUrl {
             let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let request = URLRequest.init(url: URL(string: encodedString)!)
-            webView.loadRequest(request)
+            webView?.load(request)
             ApplicationData.shared.reservedUrl = nil
         }
     }
@@ -69,7 +83,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.httpBody = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
             
-            webView.loadRequest(request)
+            webView?.load(request)
         }else{
             // 일반 로그인
             targetUrl = ApplicationData.shared.getNormalLoginUrl()
@@ -80,7 +94,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                 request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.httpBody = body.data(using: .utf8)
             }
-            webView.loadRequest(request)
+            webView?.load(request)
         }
     }
     
@@ -88,7 +102,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         if let url = noti.object as? String {
             let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let request = URLRequest.init(url: URL(string: encodedString)!)
-            webView.loadRequest(request)
+            webView?.load(request)
             ApplicationData.shared.reservedUrl = nil
         }
     }
@@ -351,4 +365,109 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     }
     */
 
+    // MARK: - WKWebView UIDelegate
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        let appName = Bundle.main.infoDictionary?["CFBundleName"] as! String?
+        let alertController = UIAlertController(title: appName, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
+            completionHandler()
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (Bool) -> Void) {
+        let appName = Bundle.main.infoDictionary?["CFBundleName"] as! String?
+        let alertController = UIAlertController(title: appName, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
+            completionHandler(true)
+        }))
+        alertController.addAction(UIAlertAction(title: "취소", style: .default, handler: { (action) in
+            completionHandler(false)
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo,
+                 completionHandler: @escaping (String?) -> Void) {
+        let appName = Bundle.main.infoDictionary?["CFBundleName"] as! String?
+        let alertController = UIAlertController(title: appName, message: prompt, preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.text = defaultText
+        }
+        alertController.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
+            if let text = alertController.textFields?.first?.text {
+                completionHandler(text)
+            } else {
+                completionHandler(defaultText)
+            }
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "취소", style: .default, handler: { (action) in
+            completionHandler(nil)
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - WKNavigation Delegate
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if (navigationAction.navigationType == .linkActivated){
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
+        }
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        guard let statusCode = (navigationResponse.response as? HTTPURLResponse)?.statusCode else {
+            return
+        }
+        
+        if statusCode == 404 {
+            // Handle 404 Error
+            do{
+                let htmlPath = Bundle.main.path(forResource: "notFound", ofType: "html");
+                let htmlString = try String.init(contentsOfFile: htmlPath!, encoding: String.Encoding.utf8)
+                
+                webView.loadHTMLString(htmlString, baseURL: nil)
+            }catch{
+                NSLog("HTML File load error")
+            }
+            
+            decisionHandler(.cancel)
+            return
+        }
+        
+        var result = callFunc(webView.url?.absoluteString)
+        let request = URLRequest.init(url: webView.url!)
+        if result == true{
+            result = self.openUrlByFileViewer(request: request)
+        }
+        if result == true{
+            result = self.downloadFrom(request: request)
+        }
+        
+        var policy = WKNavigationResponsePolicy.allow
+        if result == false {
+            policy = .cancel
+        }
+        decisionHandler(policy)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if introViewController != nil {
+            introViewController?.view.removeFromSuperview()
+            introViewController = nil
+        }
+    }
+    
+    @available(iOS 9, *)
+    public func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        // 중복적으로 리로드가 일어나지 않도록 처리 필요.
+        webView.reload()
+    }
+    
 }
