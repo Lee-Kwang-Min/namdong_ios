@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		65E0384671A9800938B026FC /* Pods_NamdongCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED2FBB6676F1377A9D59B4B /* Pods_NamdongCS.framework */; };
 		830DE67E1F56B61500EFBF2F /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
+		831CD9201F8E96EA005AC9D6 /* UIWebView+Javascript.m in Sources */ = {isa = PBXBuildFile; fileRef = 831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */; };
+		831CD9211F8E96EA005AC9D6 /* UIWebView+Javascript.m in Sources */ = {isa = PBXBuildFile; fileRef = 831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */; };
+		831CD9221F8E96EB005AC9D6 /* UIWebView+Javascript.m in Sources */ = {isa = PBXBuildFile; fileRef = 831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */; };
+		831CD9231F8E96EB005AC9D6 /* UIWebView+Javascript.m in Sources */ = {isa = PBXBuildFile; fileRef = 831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */; };
 		832080BE1F5BF2E10083B994 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D471F2F7F0500A4803D /* MainViewController.swift */; };
 		832080BF1F5BF2E10083B994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83232D191F2F6B8D00A4803D /* ViewController.swift */; };
 		832080C01F5BF2E10083B994 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DE67D1F56B61500EFBF2F /* ApplicationData.swift */; };
@@ -76,6 +80,9 @@
 		5AED8AE03A64113A6412183C /* Pods-NamdongCS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongCS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongCS/Pods-NamdongCS.release.xcconfig"; sourceTree = "<group>"; };
 		830DE67A1F56842E00EFBF2F /* Namdong.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Namdong.entitlements; sourceTree = "<group>"; };
 		830DE67D1F56B61500EFBF2F /* ApplicationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
+		831CD9191F8E95F0005AC9D6 /* NamdongCS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NamdongCS-Bridging-Header.h"; sourceTree = "<group>"; };
+		831CD91E1F8E95FD005AC9D6 /* UIWebView+Javascript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Javascript.h"; sourceTree = "<group>"; };
+		831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Javascript.m"; sourceTree = "<group>"; };
 		832080D11F5BF2E10083B994 /* DongyoungCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DongyoungCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		832080D21F5BF2E20083B994 /* DongyoungCS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DongyoungCS-Info.plist"; path = "/Users/chris/Project/namdong_ios/DongyoungCS-Info.plist"; sourceTree = "<absolute>"; };
 		832080D71F5BFB7F0083B994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -191,6 +198,15 @@
 			path = Certification;
 			sourceTree = "<group>";
 		};
+		831CD91D1F8E95FD005AC9D6 /* Objc */ = {
+			isa = PBXGroup;
+			children = (
+				831CD91E1F8E95FD005AC9D6 /* UIWebView+Javascript.h */,
+				831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */,
+			);
+			path = Objc;
+			sourceTree = "<group>";
+		};
 		832080D61F5BFB7F0083B994 /* dycs */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +267,7 @@
 		83232D161F2F6B8D00A4803D /* Namdong */ = {
 			isa = PBXGroup;
 			children = (
+				831CD91D1F8E95FD005AC9D6 /* Objc */,
 				830DE67A1F56842E00EFBF2F /* Namdong.entitlements */,
 				839EC50C1F87D6AF006A7D0E /* NamdongRelease.entitlements */,
 				83232D171F2F6B8D00A4803D /* AppDelegate.swift */,
@@ -264,6 +281,7 @@
 				83232D471F2F7F0500A4803D /* MainViewController.swift */,
 				830DE67D1F56B61500EFBF2F /* ApplicationData.swift */,
 				833A6FC01F5EEBC70053D792 /* FileViewController.swift */,
+				831CD9191F8E95F0005AC9D6 /* NamdongCS-Bridging-Header.h */,
 			);
 			path = Namdong;
 			sourceTree = "<group>";
@@ -409,6 +427,7 @@
 					83232D131F2F6B8D00A4803D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 65V42A4R5T;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -742,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831CD9211F8E96EA005AC9D6 /* UIWebView+Javascript.m in Sources */,
 				832080BE1F5BF2E10083B994 /* MainViewController.swift in Sources */,
 				833A6FC21F5EEBC70053D792 /* FileViewController.swift in Sources */,
 				832080BF1F5BF2E10083B994 /* ViewController.swift in Sources */,
@@ -754,6 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831CD9221F8E96EB005AC9D6 /* UIWebView+Javascript.m in Sources */,
 				832080E01F5BFD0E0083B994 /* MainViewController.swift in Sources */,
 				833A6FC31F5EEBC70053D792 /* FileViewController.swift in Sources */,
 				832080E11F5BFD0E0083B994 /* ViewController.swift in Sources */,
@@ -766,6 +787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831CD9231F8E96EB005AC9D6 /* UIWebView+Javascript.m in Sources */,
 				832080F81F5BFD530083B994 /* MainViewController.swift in Sources */,
 				833A6FC41F5EEBC70053D792 /* FileViewController.swift in Sources */,
 				832080F91F5BFD530083B994 /* ViewController.swift in Sources */,
@@ -778,6 +800,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831CD9201F8E96EA005AC9D6 /* UIWebView+Javascript.m in Sources */,
 				83232D481F2F7F0500A4803D /* MainViewController.swift in Sources */,
 				833A6FC11F5EEBC70053D792 /* FileViewController.swift in Sources */,
 				83232D1A1F2F6B8D00A4803D /* ViewController.swift in Sources */,
@@ -1010,12 +1033,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Namdong/Namdong.entitlements;
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1027,12 +1053,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Namdong/NamdongRelease.entitlements;
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
