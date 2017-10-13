@@ -13,10 +13,15 @@ public typealias CompletionHandler = (_ isOpenable: Bool) -> Void
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageIntro: UIImageView!
+    var fcmReceiver: NSObjectProtocol? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.fcmReceiver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "TokenChanged2"), object: nil, queue: nil) { (notification) in
+            // push to new view
+            self.performSegue(withIdentifier: "showWeb", sender: nil)
+        }
         
         let introImage = ApplicationData.shared.getIntroImage()
         imageIntro.image = introImage
@@ -28,11 +33,32 @@ class ViewController: UIViewController {
             
             if fcmToken != nil {
                 time = DispatchTime.now() + 1
-            }
-            DispatchQueue.main.asyncAfter(deadline: time) {
-                self.performSegue(withIdentifier: "showWeb", sender: nil)
+                
+                DispatchQueue.main.asyncAfter(deadline: time) {
+                    self.performSegue(withIdentifier: "showWeb", sender: nil)
+                }
+            }else{
+                // wait 10sec while receiving fcm token
+                time = DispatchTime.now() + 10
+                DispatchQueue.main.asyncAfter(deadline: time) {
+                    if (ApplicationData.shared.fcmToken.count < 1)
+                    {
+                        let alertController = UIAlertController.init(title: "", message: "Check the network status and try again.", preferredStyle: .alert)
+                        let actionOK = UIAlertAction.init(title: "OK", style: .cancel, handler: { (alert) in
+                            exit(0)
+                        })
+                        alertController.addAction(actionOK)
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                }
             }
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // remove observer
+        NotificationCenter.default.removeObserver(fcmReceiver as Any)
+        fcmReceiver = nil
     }
 
     override func didReceiveMemoryWarning() {

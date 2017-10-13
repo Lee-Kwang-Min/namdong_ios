@@ -21,6 +21,8 @@ class ApplicationData: NSObject {
     var cookieData  = Dictionary<String, String>()
     var fcmToken    = ""
     var reservedUrl: String? = nil
+    var menuid: String? = nil
+    var paramdata: String? = nil
     var isFirstInit   = false
     
     
@@ -290,5 +292,11 @@ class ApplicationData: NSObject {
         }
         
         return currentUrl.replacingOccurrences(of: originFileName, with: fileName)
+    }
+    
+    func clearPushData() {
+        reservedUrl = nil
+        menuid = nil
+        paramdata = nil
     }
 }

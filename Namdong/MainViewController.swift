@@ -67,22 +67,38 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             // 자동 로그인
             let requestUrl = ApplicationData.shared.getAutoLoginUrl()
             var request = URLRequest.init(url: URL(string: requestUrl)!)
+            
+            var postData = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId)
+            if ApplicationData.shared.menuid != nil || ApplicationData.shared.paramdata != nil {
+                if let menuid = ApplicationData.shared.menuid {
+                    postData = postData.appendingFormat("&menuid=%@", menuid)
+                }
+                if let paramdata = ApplicationData.shared.paramdata {
+                    postData = postData.appendingFormat("&paramdata=%@", paramdata)
+                }
+                ApplicationData.shared.clearPushData()
+            }
             request.httpMethod = "POST"
             request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.httpBody = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId).data(using: .utf8)
+            request.httpBody = postData.data(using: .utf8)
             
             webView.loadRequest(request)
         }else{
             // 일반 로그인
-            targetUrl = ApplicationData.shared.getNormalLoginUrl()
-            var request = URLRequest.init(url: URL(string: targetUrl)!)
-            if fcmToken != nil {
-                let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
-                request.httpMethod = "POST"
-                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-                request.httpBody = body.data(using: .utf8)
+            if let reservedUrl = ApplicationData.shared.reservedUrl {
+                let request = URLRequest.init(url: URL(string: reservedUrl)!)
+                webView.loadRequest(request)
+            }else{
+                targetUrl = ApplicationData.shared.getNormalLoginUrl()
+                var request = URLRequest.init(url: URL(string: targetUrl)!)
+                if fcmToken != nil {
+                    let body = ("eTokenId=" + fcmToken! + "&eDevice=I")
+                    request.httpMethod = "POST"
+                    request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                    request.httpBody = body.data(using: .utf8)
+                }
+                webView.loadRequest(request)
             }
-            webView.loadRequest(request)
         }
     }
     
@@ -91,7 +107,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let request = URLRequest.init(url: URL(string: encodedString)!)
             webView.loadRequest(request)
-            ApplicationData.shared.reservedUrl = nil
+            ApplicationData.shared.clearPushData()
         }
     }
     

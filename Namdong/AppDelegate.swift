@@ -65,8 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if urlLink != nil {
                 RNNotificationView.hide()
                 // move to url
-//                ApplicationData.shared.reservedUrl = urlLink
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UrlNoti"), object: urlLink)
+                ApplicationData.shared.reservedUrl = urlLink
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UrlNoti"), object: urlLink)
             }
         }
     }
@@ -81,8 +81,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Print message ID.
         if UIApplication.shared.applicationState == .inactive {
-//            let urlLink = userInfo["gcm.notification.link_url"] as? String
-//            ApplicationData.shared.reservedUrl = urlLink
+            let urlLink = userInfo["gcm.notification.link_url"] as? String
+            ApplicationData.shared.reservedUrl = urlLink
+            if let menuid = userInfo["gcm.notification.menuid"] as? String {
+                ApplicationData.shared.menuid = menuid
+            }
+            if let paramdata = userInfo["gcm.notification.paramdata"] as? String {
+                ApplicationData.shared.paramdata = paramdata
+            }
         }else{
             self.showNotification(userInfo)
         }
@@ -99,8 +105,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Under iOS 10: Using
         if UIApplication.shared.applicationState == .inactive {
-//            let urlLink = userInfo["gcm.notification.link_url"] as? String
-//            ApplicationData.shared.reservedUrl = urlLink
+            let urlLink = userInfo["gcm.notification.link_url"] as? String
+            ApplicationData.shared.reservedUrl = urlLink
+            if let menuid = userInfo["gcm.notification.menuid"] as? String {
+                ApplicationData.shared.menuid = menuid
+            }
+            if let paramdata = userInfo["gcm.notification.paramdata"] as? String {
+                ApplicationData.shared.paramdata = paramdata
+            }
         }else{
             self.showNotification(userInfo)
         }
@@ -184,9 +196,15 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-//        let userInfo = response.notification.request.content.userInfo
-//        let urlLink = userInfo["gcm.notification.link_url"] as? String
-//        ApplicationData.shared.reservedUrl = urlLink
+        let userInfo = response.notification.request.content.userInfo
+        let urlLink = userInfo["gcm.notification.link_url"] as? String
+        ApplicationData.shared.reservedUrl = urlLink
+        if let menuid = userInfo["gcm.notification.menuid"] as? String {
+            ApplicationData.shared.menuid = menuid
+        }
+        if let paramdata = userInfo["gcm.notification.paramdata"] as? String {
+            ApplicationData.shared.paramdata = paramdata
+        }
         
         completionHandler()
     }
@@ -199,9 +217,11 @@ extension AppDelegate : MessagingDelegate {
     func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
         print("Firebase registration token: \(fcmToken)")
 
+        ApplicationData.shared.fcmToken = fcmToken;
         UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
         UserDefaults.standard.synchronize()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TokenChanged"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "TokenChanged2"), object: nil)
     }
     // [END refresh_token]
     
