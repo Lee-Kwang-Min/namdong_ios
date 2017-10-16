@@ -346,6 +346,8 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                 }
             }
         }
+        
+        ApplicationData.shared.saveCookieData()
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

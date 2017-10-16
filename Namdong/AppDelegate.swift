@@ -145,12 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         // save cookie to keychain
-        let cookies = HTTPCookieStorage.shared.cookies
-        if let cookieCount = cookies?.count, cookieCount > 0 {
-            let cookieData = NSKeyedArchiver.archivedData(withRootObject: cookies as Any)
-            UserDefaults.standard.set(cookieData, forKey: keyCookie)
-            UserDefaults.standard.synchronize()
-        }
+        ApplicationData.shared.saveCookieData()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

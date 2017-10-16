@@ -156,29 +156,8 @@ class ApplicationData: NSObject {
         let cookies = HTTPCookieStorage.shared.cookies
         if let cookieCount = cookies?.count, cookieCount > 0 {
             let cookieData = NSKeyedArchiver.archivedData(withRootObject: cookies as Any)
-            
-            // 키값을 별도로 추려서 저장함.
-            for cookie in HTTPCookieStorage.shared.cookies! {
-                let isDomainMatched = self.getSecureServerUrl().contains(cookie.domain)
-                let isPathMatched   = cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType)
-                if isDomainMatched && isPathMatched {
-                    UserDefaults.standard.setValue(cookie.value, forKey: cookie.name)
-                    
-                    ApplicationData.shared.txtLog(string: "페이지 로드 후 저장한 값: -" + cookie.name + ": " + cookie.value)
-                }
-            }
-            let stampString = String(arc4random()%100)
-            UserDefaults.standard.setValue(stampString, forKey: "stamp")
-            ApplicationData.shared.txtLog(string: "페이지 로드 후 스탬프: -" + stampString)
-            
-            
             UserDefaults.standard.set(cookieData, forKey: keyCookie)
-            let result = UserDefaults.standard.synchronize()
-            if result == false {
-                ApplicationData.shared.txtLog(string: "저장 실패!!!!!!")
-            }else{
-                ApplicationData.shared.txtLog(string: "저장 완료")
-            }
+            UserDefaults.standard.synchronize()
         }
     }
     
@@ -328,34 +307,5 @@ class ApplicationData: NSObject {
         reservedUrl = nil
         menuid = nil
         paramdata = nil
-    }
-    
-    func txtLog(string: String) {
-        let file = "log.txt"
-        print(string)
-        
-        let text = string + "\n";
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            
-            let fileURL = dir.appendingPathComponent(file)
-            
-            let data = text.data(using: .utf8)
-            
-            // check exist
-            if FileManager.default.fileExists(atPath: fileURL.path) == false {
-                // create new
-                FileManager.default.createFile(atPath: fileURL.path, contents: nil, attributes: [:])
-            }
-            
-            do {
-                let fileHandle = try FileHandle.init(forWritingTo: fileURL)
-                
-                fileHandle.seekToEndOfFile()
-                fileHandle.write(data!)
-                fileHandle.closeFile()
-            }catch {
-                
-            }
-        }
     }
 }
