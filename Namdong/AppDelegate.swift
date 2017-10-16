@@ -11,11 +11,12 @@ import Firebase
 import UserNotifications
 import RNNotificationView
 
+let keyCookie = "Cookie"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let keyCookie = "Cookie"
 
     let gcmMessageIDKey = "gcm.message_id"
     let apsKey = "aps"

@@ -152,6 +152,36 @@ class ApplicationData: NSObject {
         }
     }
     
+    func saveCookieData(){
+        let cookies = HTTPCookieStorage.shared.cookies
+        if let cookieCount = cookies?.count, cookieCount > 0 {
+            let cookieData = NSKeyedArchiver.archivedData(withRootObject: cookies as Any)
+            
+            // 키값을 별도로 추려서 저장함.
+            for cookie in HTTPCookieStorage.shared.cookies! {
+                let isDomainMatched = self.getSecureServerUrl().contains(cookie.domain)
+                let isPathMatched   = cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType)
+                if isDomainMatched && isPathMatched {
+                    UserDefaults.standard.setValue(cookie.value, forKey: cookie.name)
+                    
+                    ApplicationData.shared.txtLog(string: "페이지 로드 후 저장한 값: -" + cookie.name + ": " + cookie.value)
+                }
+            }
+            let stampString = String(arc4random()%100)
+            UserDefaults.standard.setValue(stampString, forKey: "stamp")
+            ApplicationData.shared.txtLog(string: "페이지 로드 후 스탬프: -" + stampString)
+            
+            
+            UserDefaults.standard.set(cookieData, forKey: keyCookie)
+            let result = UserDefaults.standard.synchronize()
+            if result == false {
+                ApplicationData.shared.txtLog(string: "저장 실패!!!!!!")
+            }else{
+                ApplicationData.shared.txtLog(string: "저장 완료")
+            }
+        }
+    }
+    
     func getCookieUrl(type: ContentMode) -> String{
         var result = ""
         
