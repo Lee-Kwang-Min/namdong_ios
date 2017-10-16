@@ -144,9 +144,9 @@ class ApplicationData: NSObject {
     
     func loadCookieData(){
         for cookie in HTTPCookieStorage.shared.cookies! {
-            print("Cookie: ", cookie.name)
-            if cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType) {
-                print("\(cookie.name) \n\n \(cookie.value) \n\n \(cookie.version) \n\n \(cookie)")
+            let isDomainMatched = self.getSecureServerUrl().contains(cookie.domain)
+            let isPathMatched   = cookie.path == "/" + self.getCookieUrl(type: ApplicationData.shared.contentType)
+            if isDomainMatched && isPathMatched {
                 cookieData.updateValue(cookie.value, forKey: cookie.name)
             }
         }

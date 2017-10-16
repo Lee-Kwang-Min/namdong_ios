@@ -63,7 +63,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             UserDefaults.standard.synchronize()
         }
         let userId = ApplicationData.shared.getUserLoginID()
-        if ApplicationData.shared.isUseAutoLogin() && userId.characters.count > 0 {
+        let isAutoLogin = ApplicationData.shared.isUseAutoLogin()
+        
+        if isAutoLogin && userId.characters.count > 0 {
             // 자동 로그인
             let requestUrl = ApplicationData.shared.getAutoLoginUrl()
             var request = URLRequest.init(url: URL(string: requestUrl)!)
