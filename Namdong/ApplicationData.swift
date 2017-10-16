@@ -299,4 +299,33 @@ class ApplicationData: NSObject {
         menuid = nil
         paramdata = nil
     }
+    
+    func txtLog(string: String) {
+        let file = "log.txt"
+        print(string)
+        
+        let text = string + "\n";
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            
+            let fileURL = dir.appendingPathComponent(file)
+            
+            let data = text.data(using: .utf8)
+            
+            // check exist
+            if FileManager.default.fileExists(atPath: fileURL.path) == false {
+                // create new
+                FileManager.default.createFile(atPath: fileURL.path, contents: nil, attributes: [:])
+            }
+            
+            do {
+                let fileHandle = try FileHandle.init(forWritingTo: fileURL)
+                
+                fileHandle.seekToEndOfFile()
+                fileHandle.write(data!)
+                fileHandle.closeFile()
+            }catch {
+                
+            }
+        }
+    }
 }
