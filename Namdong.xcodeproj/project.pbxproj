@@ -420,6 +420,7 @@
 					};
 					832080DD1F5BFD0E0083B994 = {
 						DevelopmentTeam = 65V42A4R5T;
+						LastSwiftMigration = 0900;
 					};
 					832080F51F5BFD530083B994 = {
 						DevelopmentTeam = Y35UZF39KG;
