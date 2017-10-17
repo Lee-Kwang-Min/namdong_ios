@@ -233,6 +233,32 @@ class ApplicationData: NSObject {
         return result
     }
     
+    func getAbsoluteLoginUrl() -> String{
+        var subUrl = ""
+        var fileName = ""
+        
+        switch self.contentType {
+        case .nscs:
+            subUrl = "NS_MOBILE_CS/"
+            fileName = "loginCS.do"
+            
+        case .nsop:
+            subUrl = "NS_MOBILE_OP/"
+            fileName = "loginOP.do"
+            
+        case .dycs:
+            subUrl = "DY_MOBILE_CS/"
+            fileName = "ㅣ"
+            break;
+            
+        case .dyop:
+            subUrl = "DY_MOBILE_OP/"
+            fileName = "loginOP.do"
+        }
+        
+        return self.getSecureServerUrl() + subUrl + "login/" + fileName
+    }
+    
     func getNormalLoginUrl() -> String{
         var subUrl = ""
         var fileName = ""

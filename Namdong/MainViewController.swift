@@ -71,6 +71,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
             var request = URLRequest.init(url: URL(string: requestUrl)!)
             
             var postData = ("eTokenId=" + fcmToken! + "&eDevice=I&inpusr=" + userId)
+            // menuid나 paramdata가 있을 경우 로그인에 실어서 보냄
             if ApplicationData.shared.menuid != nil || ApplicationData.shared.paramdata != nil {
                 if let menuid = ApplicationData.shared.menuid {
                     postData = postData.appendingFormat("&menuid=%@", menuid)
@@ -78,19 +79,30 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                 if let paramdata = ApplicationData.shared.paramdata {
                     postData = postData.appendingFormat("&paramdata=%@", paramdata)
                 }
-                ApplicationData.shared.clearPushData()
+                // menuid가 없고 link_url이 있을 경우 link_url을 호출
+            }else if let reservedUrl = ApplicationData.shared.reservedUrl {
+                request = URLRequest.init(url: URL.init(string: reservedUrl)!)
+                postData = "";
+            }else{
+                // 그 외는 일반 로그인
             }
-            request.httpMethod = "POST"
-            request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.httpBody = postData.data(using: .utf8)
+            
+            if postData.count > 0 {
+                request.httpMethod = "POST"
+                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                request.httpBody = postData.data(using: .utf8)
+            }
             
             webView.loadRequest(request)
         }else{
             // 일반 로그인
-            if let reservedUrl = ApplicationData.shared.reservedUrl {
-                let request = URLRequest.init(url: URL(string: reservedUrl)!)
+            if (ApplicationData.shared.paramdata != nil || ApplicationData.shared.menuid != nil || ApplicationData.shared.reservedUrl != nil){
+                // 푸시: 무조건 일반 로그인 화면
+                let loginUrlString = ApplicationData.shared.getAbsoluteLoginUrl()
+                let request = URLRequest.init(url: URL(string: loginUrlString)!)
                 webView.loadRequest(request)
             }else{
+                // 실행: 메인 또는 로그인화면
                 targetUrl = ApplicationData.shared.getNormalLoginUrl()
                 var request = URLRequest.init(url: URL(string: targetUrl)!)
                 if fcmToken != nil {
@@ -102,15 +114,48 @@ class MainViewController: UIViewController, UIWebViewDelegate {
                 webView.loadRequest(request)
             }
         }
+        ApplicationData.shared.clearPushData()
     }
     
     func loadNotiUrl(_ noti: Notification){
-        if let url = noti.object as? String {
-            let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-            let request = URLRequest.init(url: URL(string: encodedString)!)
+        let instance = ApplicationData.shared
+        if instance.isUseAutoLogin() {
+            // AUTO Login
+            // menuid나 paramdata가 있을 경우 로그인에 실어서 보냄
+            let requestUrl = ApplicationData.shared.getAutoLoginUrl()
+            var request = URLRequest.init(url: URL(string: requestUrl)!)
+            
+            var postData = ""
+            // menuid나 paramdata가 있을 경우 로그인에 실어서 보냄
+            if ApplicationData.shared.menuid != nil || ApplicationData.shared.paramdata != nil {
+                if let menuid = ApplicationData.shared.menuid {
+                    postData = postData.appendingFormat("&menuid=%@", menuid)
+                }
+                if let paramdata = ApplicationData.shared.paramdata {
+                    postData = postData.appendingFormat("&paramdata=%@", paramdata)
+                }
+                // menuid가 없고 link_url이 있을 경우 link_url을 호출
+            }else if let reservedUrl = ApplicationData.shared.reservedUrl {
+                request = URLRequest.init(url: URL.init(string: reservedUrl)!)
+                postData = "";
+            }
+            
+            if postData.count > 0 {
+                request.httpMethod = "POST"
+                request.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                request.httpBody = postData.data(using: .utf8)
+            }
+            
             webView.loadRequest(request)
-            ApplicationData.shared.clearPushData()
+        }else{
+            // Not Auto Login
+            if let requestUrl = ApplicationData.shared.reservedUrl
+            {
+                let request = URLRequest.init(url: URL(string: requestUrl)!)
+                webView.loadRequest(request)
+            }
         }
+        ApplicationData.shared.clearPushData()
     }
     
     /// Function caller

@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if urlLink != nil {
                 RNNotificationView.hide()
                 // move to url
-                ApplicationData.shared.reservedUrl = urlLink
+                ApplicationData.shared.reservedUrl = urlLink?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UrlNoti"), object: urlLink)
             }
         }
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Print message ID.
         if UIApplication.shared.applicationState == .inactive {
             let urlLink = userInfo["gcm.notification.link_url"] as? String
-            ApplicationData.shared.reservedUrl = urlLink
+            ApplicationData.shared.reservedUrl = urlLink?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             if let menuid = userInfo["gcm.notification.menuid"] as? String {
                 ApplicationData.shared.menuid = menuid
             }
@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Under iOS 10: Using
         if UIApplication.shared.applicationState == .inactive {
             let urlLink = userInfo["gcm.notification.link_url"] as? String
-            ApplicationData.shared.reservedUrl = urlLink
+            ApplicationData.shared.reservedUrl = urlLink?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             if let menuid = userInfo["gcm.notification.menuid"] as? String {
                 ApplicationData.shared.menuid = menuid
             }
@@ -194,7 +194,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
         let urlLink = userInfo["gcm.notification.link_url"] as? String
-        ApplicationData.shared.reservedUrl = urlLink
+        ApplicationData.shared.reservedUrl = urlLink?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         if let menuid = userInfo["gcm.notification.menuid"] as? String {
             ApplicationData.shared.menuid = menuid
         }
