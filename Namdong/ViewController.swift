@@ -39,7 +39,7 @@ class ViewController: UIViewController {
                 }
             }else{
                 // wait 10sec while receiving fcm token
-                time = DispatchTime.now() + 10
+                time = DispatchTime.now() + 30
                 DispatchQueue.main.asyncAfter(deadline: time) {
                     if (ApplicationData.shared.fcmToken.count < 1)
                     {
