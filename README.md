@@ -5,7 +5,6 @@ This README would normally document whatever steps are necessary to get your app
 ### What is this repository for? ###
 
 * Namsung and Dongyoung’s groupware
-* Account registed at Sep 20, 2017. You have to renew every year for extend the contract.
 
 ### How do I get set up? ###
 
@@ -18,6 +17,7 @@ This README would normally document whatever steps are necessary to get your app
 ### Account ###
 ##### iTunes Connect #####
 https://itunesconnect.apple.com
+> NOTE: Account registed at Sep 20, 2017. You have to renew every year for extend the contract.
 
 * Namsung
     * Mail: evermin@namsung.co.kr
