@@ -29,7 +29,13 @@ class ViewController: UIViewController {
         if ApplicationData.shared.isFirstInit == false {
             ApplicationData.shared.isFirstInit = true;
             var time = DispatchTime.now() + 5
-            let fcmToken = UserDefaults.standard.object(forKey: "fcmToken")
+            var fcmToken = UserDefaults.standard.object(forKey: "fcmToken")
+            
+            // Generate randome FCM Code for china
+            let contryCode = Locale.current.regionCode
+            if contryCode == "CN" && fcmToken == nil {
+                fcmToken = ApplicationData.shared.randomString(length: 48)
+            }
             
             if fcmToken != nil {
                 time = DispatchTime.now() + 1
