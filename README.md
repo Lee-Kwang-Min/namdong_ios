@@ -18,7 +18,7 @@ This README would normally document whatever steps are necessary to get your app
 ##### iTunes Connect #####
 https://itunesconnect.apple.com
 > NOTE: 
-> Account registed at Sep 20, 2017. You have to renew every year for extend the contract.
+> Account registed at Sep 20, 2017. You have to renew every year for extend the developer program license.
 
 * Namsung
     * Mail: evermin@namsung.co.kr
