@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Namsung and Dongyoungâ€™s groupware
+* Namsung and Dongyoung’s groupware
 
 ### How do I get set up? ###
 
@@ -16,7 +16,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Account ###
 
-https://play.google.com/apps/publish/?hl=ko
+https://itunesconnect.apple.com/
 
 * Namsung
  * Mail: evermin@namsung.co.kr
