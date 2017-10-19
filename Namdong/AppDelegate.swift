@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        configureBidu(launchOptions)
         
         Messaging.messaging().delegate = self
         
@@ -48,6 +49,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         return true
+    }
+    
+    func configureBidu(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+        
+        BPush.registerChannel(launchOptions, apiKey: ApplicationData.shared.getBiduKey(), pushMode: .development, withFirstAction: "Open", withSecondAction: "Reply", withCategory: "test", useBehaviorTextInput: true, isDebug: true)
+        let userInfo = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification]
+        if let result = userInfo {
+            BPush.handleNotification(result as! [AnyHashable : Any])
+        }
     }
     
     func showNotification(_ object: Dictionary<AnyHashable, Any>){
@@ -80,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // With swizzling disabled you must let Messaging know about the message, for Analytics
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
-        // Print message ID.
+        // FCM
         if UIApplication.shared.applicationState == .inactive {
             let urlLink = userInfo["gcm.notification.link_url"] as? String
             ApplicationData.shared.reservedUrl = urlLink?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -91,6 +101,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ApplicationData.shared.paramdata = paramdata
             }
         }else{
+            self.showNotification(userInfo)
+        }
+        
+        // Bidu
+        BPush.handleNotification(userInfo)
+        if application.applicationState == .inactive {
+            
+        }else {
             self.showNotification(userInfo)
         }
     }
@@ -130,10 +148,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // If swizzling is disabled then this function must be implemented so that the APNs token can be paired to
     // the FCM registration token.
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print("APNs token retrieved: \(deviceToken)")
-        
-        // With swizzling disabled you must set the APNs token here.
-        // Messaging.messaging().apnsToken = deviceToken
+        // set Bidu
+        BPush.registerDeviceToken(deviceToken)
+        BPush.bindChannel { (result, error) in
+            guard error == nil else { return }
+            
+            if let data = result as? NSDictionary {
+                BPush.setTag("namsung", withCompleteHandler: { (result, error) in
+                    let channelID = data["channel_id"]
+                    ApplicationData.shared.baiduToken = channelID as! String
+                    UserDefaults.standard.set(channelID, forKey: "baiduToken")
+                    UserDefaults.standard.synchronize()
+                })
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

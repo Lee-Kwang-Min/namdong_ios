@@ -13,6 +13,8 @@ This README would normally document whatever steps are necessary to get your app
 * Enviroment
     * XCode 9.0
     * Swift 3.2
+* Deployment Target
+    * iOS 8.0
 
 ### Account ###
 ##### iTunes Connect #####

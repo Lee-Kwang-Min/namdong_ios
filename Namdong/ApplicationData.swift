@@ -20,6 +20,7 @@ class ApplicationData: NSObject {
     var contentType = ContentMode.nscs  // defaultValue
     var cookieData  = Dictionary<String, String>()
     var fcmToken    = ""
+    var baiduToken  = ""
     var reservedUrl: String? = nil
     var menuid: String? = nil
     var paramdata: String? = nil
@@ -333,6 +334,27 @@ class ApplicationData: NSObject {
         reservedUrl = nil
         menuid = nil
         paramdata = nil
+    }
+    
+    func getBiduKey() -> String {
+        let bundleID = Bundle.main.bundleIdentifier!
+        switch bundleID {
+        case "kr.co.namsung.cs":
+            return "LfKX8QvxFAot3eD1l0E65O7N"
+            
+        case "kr.co.namsung.op":
+            return "LfKX8QvxFAot3eD1l0E65O7N"
+            
+        case "kr.co.pcsline.cs":
+            return "LfKX8QvxFAot3eD1l0E65O7N"
+            
+        case "kr.co.pcsline.op":
+            return "LfKX8QvxFAot3eD1l0E65O7N"
+            
+        default:
+            break
+        }
+        return ""
     }
     
     /// 임의의 문자열 생성

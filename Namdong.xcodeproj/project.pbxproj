@@ -61,6 +61,18 @@
 		835375C11F566B240025FBE1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C01F566B240025FBE1 /* UserNotifications.framework */; };
 		835375C31F566B2B0025FBE1 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835375C21F566B2B0025FBE1 /* PushKit.framework */; };
 		835B30901F677A1C004198F9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83232D231F2F6B8D00A4803D /* Info.plist */; };
+		83B68DAB1F98535D009F01F4 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DA81F985359009F01F4 /* BPushCerResource.bundle */; };
+		83B68DAC1F98535D009F01F4 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DA81F985359009F01F4 /* BPushCerResource.bundle */; };
+		83B68DAD1F98535D009F01F4 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DA81F985359009F01F4 /* BPushCerResource.bundle */; };
+		83B68DAE1F98535E009F01F4 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DA81F985359009F01F4 /* BPushCerResource.bundle */; };
+		83B68DAF1F985360009F01F4 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B68DA91F985359009F01F4 /* libBPush.a */; };
+		83B68DB01F985360009F01F4 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B68DA91F985359009F01F4 /* libBPush.a */; };
+		83B68DB11F985360009F01F4 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B68DA91F985359009F01F4 /* libBPush.a */; };
+		83B68DB21F985361009F01F4 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B68DA91F985359009F01F4 /* libBPush.a */; };
+		83B68DB31F985363009F01F4 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DAA1F985359009F01F4 /* test.caf */; };
+		83B68DB41F985363009F01F4 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DAA1F985359009F01F4 /* test.caf */; };
+		83B68DB51F985364009F01F4 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DAA1F985359009F01F4 /* test.caf */; };
+		83B68DB61F985364009F01F4 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 83B68DAA1F985359009F01F4 /* test.caf */; };
 		83CE19AD1F6946E90004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */; };
 		83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */; };
 		83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */; };
@@ -106,6 +118,10 @@
 		835375C01F566B240025FBE1 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		835375C21F566B2B0025FBE1 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		839EC50C1F87D6AF006A7D0E /* NamdongRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NamdongRelease.entitlements; sourceTree = "<group>"; };
+		83B68DA71F985359009F01F4 /* BPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		83B68DA81F985359009F01F4 /* BPushCerResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BPushCerResource.bundle; sourceTree = "<group>"; };
+		83B68DA91F985359009F01F4 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		83B68DAA1F985359009F01F4 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
 		83CE19A71F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83CE19A91F6946E90004CB94 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F3634C662DD52CBC7EE131 /* Pods-NamdongOP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NamdongOP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NamdongOP/Pods-NamdongOP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +138,7 @@
 			files = (
 				832080C31F5BF2E10083B994 /* PushKit.framework in Frameworks */,
 				832080C41F5BF2E10083B994 /* UserNotifications.framework in Frameworks */,
+				83B68DB01F985360009F01F4 /* libBPush.a in Frameworks */,
 				9CE6FA7EBD339C4A89413E2B /* Pods_DongyoungCS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +149,7 @@
 			files = (
 				832080E51F5BFD0E0083B994 /* PushKit.framework in Frameworks */,
 				832080E61F5BFD0E0083B994 /* UserNotifications.framework in Frameworks */,
+				83B68DB11F985360009F01F4 /* libBPush.a in Frameworks */,
 				F06A6193CDA35AB01427914E /* Pods_NamdongOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +160,7 @@
 			files = (
 				832080FD1F5BFD530083B994 /* PushKit.framework in Frameworks */,
 				832080FE1F5BFD530083B994 /* UserNotifications.framework in Frameworks */,
+				83B68DB21F985361009F01F4 /* libBPush.a in Frameworks */,
 				B8F77F372C447DCFCD2618AB /* Pods_DongyoungOP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +171,7 @@
 			files = (
 				835375C31F566B2B0025FBE1 /* PushKit.framework in Frameworks */,
 				835375C11F566B240025FBE1 /* UserNotifications.framework in Frameworks */,
+				83B68DAF1F985360009F01F4 /* libBPush.a in Frameworks */,
 				65E0384671A9800938B026FC /* Pods_NamdongCS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +221,7 @@
 		831CD91D1F8E95FD005AC9D6 /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				83B68DA61F985359009F01F4 /* idfaversion */,
 				831CD91E1F8E95FD005AC9D6 /* UIWebView+Javascript.h */,
 				831CD91F1F8E95FD005AC9D6 /* UIWebView+Javascript.m */,
 			);
@@ -302,6 +323,17 @@
 				835375BD1F5663100025FBE1 /* notFound.html */,
 			);
 			path = html;
+			sourceTree = "<group>";
+		};
+		83B68DA61F985359009F01F4 /* idfaversion */ = {
+			isa = PBXGroup;
+			children = (
+				83B68DA71F985359009F01F4 /* BPush.h */,
+				83B68DA81F985359009F01F4 /* BPushCerResource.bundle */,
+				83B68DA91F985359009F01F4 /* libBPush.a */,
+				83B68DAA1F985359009F01F4 /* test.caf */,
+			);
+			path = idfaversion;
 			sourceTree = "<group>";
 		};
 		83CE19A51F6946E90004CB94 /* DY */ = {
@@ -467,12 +499,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B68DB51F985364009F01F4 /* test.caf in Resources */,
 				832080C81F5BF2E10083B994 /* notFound.html in Resources */,
 				832080DA1F5BFB7F0083B994 /* GoogleService-Info.plist in Resources */,
 				832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */,
 				83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C21F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */,
+				83B68DAD1F98535D009F01F4 /* BPushCerResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,12 +514,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B68DB41F985363009F01F4 /* test.caf in Resources */,
 				832080E91F5BFD0E0083B994 /* notFound.html in Resources */,
 				832080EA1F5BFD0E0083B994 /* Assets.xcassets in Resources */,
 				832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */,
 				83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C31F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				832081121F5BFE3E0083B994 /* GoogleService-Info.plist in Resources */,
+				83B68DAC1F98535D009F01F4 /* BPushCerResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,12 +529,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B68DB31F985363009F01F4 /* test.caf in Resources */,
 				832081011F5BFD530083B994 /* notFound.html in Resources */,
 				832081041F5BFD530083B994 /* Assets.xcassets in Resources */,
 				832081051F5BFD530083B994 /* Main.storyboard in Resources */,
 				83CE19B11F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C41F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				8320810F1F5BFE060083B994 /* GoogleService-Info.plist in Resources */,
+				83B68DAB1F98535D009F01F4 /* BPushCerResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,9 +544,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B68DB61F985364009F01F4 /* test.caf in Resources */,
 				83CE19AD1F6946E90004CB94 /* LaunchScreen.storyboard in Resources */,
 				835375BE1F5663100025FBE1 /* notFound.html in Resources */,
 				83232D1F1F2F6B8D00A4803D /* Assets.xcassets in Resources */,
+				83B68DAE1F98535E009F01F4 /* BPushCerResource.bundle in Resources */,
 				835B30901F677A1C004198F9 /* Info.plist in Resources */,
 				832080DC1F5BFB890083B994 /* GoogleService-Info.plist in Resources */,
 				834511C11F5D99E400BB63B4 /* LaunchScreen.storyboard in Resources */,
@@ -842,6 +882,11 @@
 				DEVELOPMENT_TEAM = Y35UZF39KG;
 				INFOPLIST_FILE = "DongyoungCS-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -859,6 +904,11 @@
 				DEVELOPMENT_TEAM = Y35UZF39KG;
 				INFOPLIST_FILE = "DongyoungCS-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -876,6 +926,11 @@
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = "$(SRCROOT)/NamsungOP-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -893,6 +948,11 @@
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = "$(SRCROOT)/NamsungOP-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -910,6 +970,11 @@
 				DEVELOPMENT_TEAM = Y35UZF39KG;
 				INFOPLIST_FILE = "$(SRCROOT)/DongyoungOP-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -927,6 +992,11 @@
 				DEVELOPMENT_TEAM = Y35UZF39KG;
 				INFOPLIST_FILE = "$(SRCROOT)/DongyoungOP-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1039,6 +1109,11 @@
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
@@ -1059,6 +1134,11 @@
 				DEVELOPMENT_TEAM = 65V42A4R5T;
 				INFOPLIST_FILE = Namdong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Namdong/Objc/idfaversion",
+					"$(PROJECT_DIR)/Namdong/Objc/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
