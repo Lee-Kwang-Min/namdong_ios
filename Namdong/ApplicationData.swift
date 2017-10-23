@@ -340,16 +340,16 @@ class ApplicationData: NSObject {
         let bundleID = Bundle.main.bundleIdentifier!
         switch bundleID {
         case "kr.co.namsung.cs":
-            return "LfKX8QvxFAot3eD1l0E65O7N"
+            return "FzZH9TagZIdiZbNpg40WjQbB"
             
         case "kr.co.namsung.op":
-            return "LfKX8QvxFAot3eD1l0E65O7N"
+            return "Rpftk85XyUa2lbL2kB1LosOu"
             
         case "kr.co.pcsline.cs":
-            return "LfKX8QvxFAot3eD1l0E65O7N"
+            return "Zkj3lK859tOXk5tFlwjFcuVF"
             
         case "kr.co.pcsline.op":
-            return "LfKX8QvxFAot3eD1l0E65O7N"
+            return "u6GSLWXrAREGLd3ZLY7GUelg"
             
         default:
             break
