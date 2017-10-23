@@ -80,42 +80,6 @@ class ViewController: UIViewController {
             viewController.targetUrl = array[1]
         }
     }
-    @IBAction func openOtherApp(_ sender: Any) {
-        let button = sender as! UIButton
-        var urlString = ""
-        var platformName = ""
-        var installUrlString = ""
-        switch button.tag {
-        case 1:
-            platformName = NSLocalizedString("KakaoTalk", comment: "App name KakaoTalk")
-            urlString = "kakaolink://"
-            installUrlString = "https://itunes.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-kakaotalk/id362057947?mt=8"
-        case 2:
-            platformName = NSLocalizedString("Facebook", comment: "App name Facebook")
-            urlString = "fb://"
-            installUrlString = "https://itunes.apple.com/kr/app/facebook/id284882215?mt=8"
-        case 3:
-            platformName = NSLocalizedString("WeChat", comment: "App name WeChat")
-            urlString = "weixin://"
-            installUrlString = "https://itunes.apple.com/kr/app/wechat/id414478124?mt=8"
-        default:
-            return
-        }
-        
-        self.openUrl(urlString) { (isOpenable) in
-            if !isOpenable {
-                let alertController = UIAlertController.init(title: NSLocalizedString("Open failed", comment: ""), message: String.init(format: NSLocalizedString("Can't open %@. Install the app for use this function.", comment: ""), platformName), preferredStyle: .alert)
-                let actionCancel = UIAlertAction.init(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil)
-                let actionInstall = UIAlertAction.init(title: NSLocalizedString("Appstore", comment: ""), style: .default, handler: { (aletAction) in
-                    self.openUrl(installUrlString)
-                })
-                alertController.addAction(actionCancel)
-                alertController.addAction(actionInstall)
-                
-                self.present(alertController, animated: true, completion: nil)
-            }
-        }
-    }
     
     /// Url Openner
     ///
@@ -143,27 +107,5 @@ class ViewController: UIViewController {
             completion!(openable)
         }
     }
-
-    @IBAction func moveManageNamsung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["남성 관리자", ApplicationData.shared.kServerUrl + "/NS_MOBILE_OP/login/loginOP.do"])
-        ApplicationData.shared.contentType = .nsop
-        
-    }
-    
-    @IBAction func moveManagerDongyoung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["동영 관리자", ApplicationData.shared.kServerUrl + "DY_MOBILE_OP/login/loginOP.do"])
-        ApplicationData.shared.contentType = .dyop
-    }
-    
-    @IBAction func moveUserNamsung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["남성 사용자", ApplicationData.shared.kServerUrl + "/NS_MOBILE_CS/login/viewMain.do"])
-        ApplicationData.shared.contentType = .nscs
-    }
-    
-    @IBAction func moveUserDongyoung(_ sender: Any) {
-        performSegue(withIdentifier: "showWeb", sender: ["동영 사용자", ApplicationData.shared.kServerUrl + "/DY_MOBILE_CS/login/viewMain.do"])
-        ApplicationData.shared.contentType = .dycs
-    }
-
 }
 
