@@ -504,6 +504,7 @@
 				832080DA1F5BFB7F0083B994 /* GoogleService-Info.plist in Resources */,
 				832080CA1F5BF2E10083B994 /* Assets.xcassets in Resources */,
 				83CE19B01F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
+				83249B0E1F9E1D9200015331 /* DongyoungCS-Info.plist in Resources */,
 				834511C21F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
 				832080CB1F5BF2E10083B994 /* Main.storyboard in Resources */,
 				83B68DAD1F98535D009F01F4 /* BPushCerResource.bundle in Resources */,
@@ -520,6 +521,7 @@
 				832080ED1F5BFD0E0083B994 /* Main.storyboard in Resources */,
 				83CE19AF1F6946FB0004CB94 /* LaunchScreen.storyboard in Resources */,
 				834511C31F5D99E500BB63B4 /* LaunchScreen.storyboard in Resources */,
+				83249B0F1F9E1D9800015331 /* NamsungOP-Info.plist in Resources */,
 				832081121F5BFE3E0083B994 /* GoogleService-Info.plist in Resources */,
 				83B68DAC1F98535D009F01F4 /* BPushCerResource.bundle in Resources */,
 			);
@@ -531,6 +533,7 @@
 			files = (
 				83B68DB31F985363009F01F4 /* test.caf in Resources */,
 				832081011F5BFD530083B994 /* notFound.html in Resources */,
+				83249B101F9E1D9E00015331 /* DongyoungOP-Info.plist in Resources */,
 				832081041F5BFD530083B994 /* Assets.xcassets in Resources */,
 				832081051F5BFD530083B994 /* Main.storyboard in Resources */,
 				83CE19B11F6946FE0004CB94 /* LaunchScreen.storyboard in Resources */,
@@ -889,6 +892,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -911,6 +915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.cs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -933,6 +938,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -955,6 +961,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.namsung.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -977,6 +984,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -999,6 +1007,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.pcsline.op;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Namdong/NamdongCS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
