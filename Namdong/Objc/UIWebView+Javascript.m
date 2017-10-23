@@ -9,14 +9,10 @@
 #import "UIWebView+Javascript.h"
 
 @implementation UIWebView (Javascript)
-static BOOL clicked = FALSE;
+
 - (void)webView:(UIWebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(id *)frame {
-    clicked = FALSE;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     
     [alert show];
-}
-- (void) alertViewCancel:(UIAlertView *)alertView {
-    clicked = TRUE;
 }
 @end

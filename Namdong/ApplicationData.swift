@@ -312,24 +312,6 @@ class ApplicationData: NSObject {
         return self.getSecureServerUrl() + subUrl + "login/" + fileName
     }
     
-    func getChangedUrlForAutoLogin(currentUrl: String) -> String{
-        var fileName = "";
-        var originFileName = "";
-        switch (self.contentType){
-        case .nscs, .dycs:
-            fileName = "actionAutoLoginCS.do"
-            originFileName = "loginCS.do"
-            break;
-            
-        case .nsop, .dyop:
-            fileName = "actionAutoLoginOP.do"
-            originFileName = "loginOP.do"
-            break;
-        }
-        
-        return currentUrl.replacingOccurrences(of: originFileName, with: fileName)
-    }
-    
     func clearPushData() {
         reservedUrl = nil
         menuid = nil
