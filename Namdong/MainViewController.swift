@@ -259,9 +259,9 @@ class MainViewController: UIViewController, UIWebViewDelegate {
         let isInvoic = request.url?.absoluteString.contains("prtInvoice.do")
         let isExFree = request.url?.absoluteString.contains("prtExFreetime.do")
         let isArrive = request.url?.absoluteString.contains("prtArrivalNotice.do")
+        let isFrmemo = request.url?.absoluteString.contains("prtFreightMemo.do")
         
-        
-        let result = (isGoogle == true || isBlCopy == true || isBooked == true || isInvoic == true || isExFree == true || isArrive == true)
+        let result = (isGoogle == true || isBlCopy == true || isBooked == true || isInvoic == true || isExFree == true || isArrive == true || isFrmemo == true)
         if result {
             // 새 창
             self.performSegue(withIdentifier: "ModalFileViewer", sender: request)
@@ -353,7 +353,7 @@ class MainViewController: UIViewController, UIWebViewDelegate {
     /// Show Dialog
     ///
     /// - Parameters:
-    ///   - title: Title to be shown on alert box
+    ///   - title: Title to be shown on alert boxfff
     ///   - message: Message to be shown on alert box
     func showDialog(title: String, message: String){
         let controller = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
