@@ -37,6 +37,21 @@ class ViewController: UIViewController {
                 fcmToken = ApplicationData.shared.randomString(length: 48)
             }
             
+//            // MARK: 시뮬레이터에서 동작하고자 할때 아래의 주석을 해제해주세요.
+//            fcmToken = ApplicationData.shared.randomString(length: 48)
+//            self.performSegue(withIdentifier: "showWeb", sender: nil)
+//            // 시뮬레이터 주석 끝
+            
+            // TODO: 시뮬레이터에서 테스트 할경우 임시 토큰이 발행됩니다.
+            //2017.11.22 evermin
+            //ios upload할 경우는 하기 소스를 주석처리를 한후 올리도록 한다.
+            #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
+                if fcmToken == nil {
+                   fcmToken = ApplicationData.shared.randomString(length: 48)
+                }
+            #endif
+            
+            
             if fcmToken != nil {
                 time = DispatchTime.now() + 1
                 
